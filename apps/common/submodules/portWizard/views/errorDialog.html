@@ -1,0 +1,14 @@
+<div id="port_wizard_error_dialog">
+	{{tryI18n i18n.commonApp.portWizard.save.errorDialog.stageLabels errorStage}}
+	<ul>
+	{{#each errors}}
+		<li>
+		{{#if causes}}
+			{{replaceVar this.message this.causes}}
+		{{else}}
+			{{message}}
+		{{/if}}
+		</li>
+	{{/each}}
+	</ul>
+</div>

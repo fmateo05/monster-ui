@@ -1,0 +1,94 @@
+{
+	"csvOnboarding": {
+		"title": "CSV Onboarding",
+		"loading": {
+			"title": "Loading CSV Onboarding"
+		},
+		"landing":{
+			"mainTitle": "Fast SmartPBX Onboarding",
+			"subTitle": "Please select one of the following options. \"Add Users\" is great for creating users on your system,<br/> while \"Add Users & Devices\" allows you to create a user and associate a SIP device in one job.",
+			"btnAddUser": "Add Users",
+			"btnAddUsersDevices": "Add Users & Devices"
+		},
+		"uploads": {
+			"mainTitleUsers": "Fast SmartPBX Onboarding - Add User",
+			"mainTitleUsersDevices": "Fast SmartPBX Onboarding - Add User & Device",
+			"subTitleUsers": "Upload a CSV File with the following columns: first_name, last_name, password, email, extension, notification_email",
+			"subTitleUsersDevices": "Upload a CSV file with the following columns: first_name, last_name, password, email, extension, notification_email, mac_address, brand, family, model, device_name.",
+			"constrainUsers": "A Header row is <strong>required.</strong> The email and extension values <strong>must be unique.</strong> Notification email is <strong>optional.</strong>",
+			"constrainUsersDevices": "A Header row is <strong>required.</strong> The email, extension, and mac_address values <strong>must be unique.</strong> Notification email is <strong>optional.</strong><br/> You are not able to adjust a device's brand, family, or model information without deleteing and recreating a device, so please ensure your information is accurate.",
+			"text": "Drag and drop your file here to upload, or browse your computer.",
+			"emptyOption": "",
+			"start": "Start Job",
+			"success": {
+				"headline": "You successfully uploaded a CSV file, please click on Proceed to continue!",
+				"subline": "File Uploaded:"
+			},
+			"back": "Back",
+			"errors": {
+				"wrongType": "Invalid type, we only accept CSV files and we received: {{type}}"
+			}
+		},
+		"review": {
+			"proceed": "Proceed",
+			"headline": {
+				"first": "You imported CSV file: ",
+				"second": "Number of records in this file: "
+			},
+			"message": {
+				"text": " ({{variable}}) column headers were recognized in your uploaded file, and we've attempted to match them with the corresponding and appropriate KAZOO header. Please review and confirm these mapping are correct before submitting your import."
+			},
+			"validation": {
+				"text": "Required records mapped: ",
+				"of": " of "
+			},
+			"errors": {
+				"title": "It appears that the columns matching didn't go as expected,<br/> please fix the following issues:",
+				"missing": "Column missing",
+				"tooMany": "Column selected more than once",
+				"duplicateEmail": "Email must be unique.",
+				"duplicateExtension": "Extension must be unique.",
+				"duplicateMac": "Mac Address must be unique."
+			},
+			"columns": {
+				"mandatory": "REQUIRED COLUMNS / HEADERS",
+				"optional": "OPTIONAL COLUMNS / HEADERS",
+				"others": "OTHERS"
+			},
+			"hasCustomizations": "Do you want to add JSON configs?",
+			"addToMainDirectory": "Do you want to add users to Company Directory?",
+			"tooltips": {
+				"proceed": "Please map all required fields before proceeding"
+			},
+			"misc": {
+				"zero": "zero"
+			}
+		},
+		"progress": {
+			"title": "Your CSV Import is in progress!",
+			"subTitle": "Please wait on this page as the data is loaded into the system. Closing the tab or leaving this page will terminate the import.",
+			"usersCreated": "Users Created: "
+		},
+		"results":{
+			"title": "Your CSV import has completed!",
+			"subTitle": "Please review the results",
+			"resultText": "user(s) were created and added to",
+			"resultText2": "user(s) and",
+			"resultText3": "devices(s) were created and added to",
+			"errors": {
+				"text": "The following users were not imported:",
+				"name": "Email is not unique for this account.",
+				"extension": "Extension is not unique for this account.",
+				"mac": "Mac Address is not unique for this account."
+			}
+		},
+
+		"customizations": {
+			"title": "Customize User, Device, Voicemail Boxes",
+			"subTitle": "Paste a JSON Payload in the area below, and we'll merge these settings for each record",
+			"userTitle": "User Settings",
+			"deviceTitle": "Device Settings",
+			"vmboxTitle": "Voicemail Box Settings"
+		}
+	}
+}

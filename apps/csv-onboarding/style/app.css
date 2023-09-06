@@ -1,0 +1,266 @@
+/* _colors.scss */
+/* unique color names */
+/* semantic color names */
+/********************** FILTERING PANEL *********************/
+/************************************************************/
+#csv_onboarding_app_container .content-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #fff;
+  border: 1px solid #c0c0c9;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative; }
+
+#csv_onboarding_app_container *[class*='monster-button'][disabled],
+#csv_onboarding_app_container *[class*='monster-button'].disabled {
+  opacity: 0.5;
+  cursor: not-allowed; }
+
+#csv_onboarding_app_container #uploads .upload-frame {
+  background: #fafafa none repeat scroll 0 0;
+  border: 1px dashed #c0c0c9;
+  margin: 20px 0;
+  padding: 50px 0;
+  text-align: center; }
+
+#csv_onboarding_app_container #uploads .upload-frame.hover {
+  background: #ddd;
+  border: 1px dashed #333; }
+
+#csv_onboarding_app_container #uploads .select-job label {
+  display: inline-block;
+  margin: 0 20px 0 0; }
+
+#csv_onboarding_app_container #uploads .select-job select {
+  margin: 0; }
+
+#csv_onboarding_app_container #uploads .upload-frame i {
+  color: #aaa;
+  font-size: 136px;
+  margin-bottom: 15px; }
+
+#csv_onboarding_app_container .actions button:not(:first-child) {
+  margin-left: 15px; }
+
+#csv_onboarding_app_container #landing .actions {
+  padding-top: 50px;
+  padding-bottom: 20px; }
+
+#csv_onboarding_app_container #uploads .actions {
+  text-align: right; }
+
+#csv_onboarding_app_container #uploads .actions > * {
+  margin-left: 15px; }
+
+#csv_onboarding_app_container #uploads #upload_csv_file {
+  display: none; }
+
+#csv_onboarding_app_container #uploads .selected-file {
+  display: none;
+  background: #fff;
+  border: 1px solid #33db24;
+  margin: 20px 0;
+  padding: 50px 0;
+  text-align: center; }
+
+#csv_onboarding_app_container #uploads .selected-file i {
+  font-size: 136px;
+  margin-bottom: 15px; }
+
+#csv_onboarding_app_container #uploads .selected-file .file-name {
+  font-weight: bold; }
+
+#csv_onboarding_app_container #uploads .selected-file .undo-upload {
+  margin-left: 10px; }
+
+#csv_onboarding_app_container #uploads .help-selection {
+  display: none;
+  margin: 15px 0; }
+
+#csv_onboarding_app_container #uploads .help-selection .title {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 15px;
+  vertical-align: top;
+  width: 150px; }
+
+#csv_onboarding_app_container #uploads .help-selection .doc-section .content {
+  display: inline-block;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  line-height: 20px; }
+
+/* Review */
+#csv_onboarding_app_container #review .review-table-wrapper {
+  margin-top: 1.5rem;
+  overflow-x: auto; }
+  #csv_onboarding_app_container #review .review-table-wrapper .dropdown-menu-wrapper {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: white;
+    border: 1px solid #c0c0c9;
+    box-shadow: 0 0 4px #888;
+    min-width: 248px; }
+    #csv_onboarding_app_container #review .review-table-wrapper .dropdown-menu-wrapper a {
+      color: #151517;
+      display: block;
+      height: 38px;
+      line-height: 38px;
+      padding: 0 12px 0 36px; }
+      #csv_onboarding_app_container #review .review-table-wrapper .dropdown-menu-wrapper a:hover:not(.category) {
+        background-color: #f4f4f5; }
+      #csv_onboarding_app_container #review .review-table-wrapper .dropdown-menu-wrapper a span {
+        float: right;
+        display: none; }
+      #csv_onboarding_app_container #review .review-table-wrapper .dropdown-menu-wrapper a.category {
+        padding-left: 12px;
+        cursor: default; }
+      #csv_onboarding_app_container #review .review-table-wrapper .dropdown-menu-wrapper a.selected {
+        color: #777; }
+        #csv_onboarding_app_container #review .review-table-wrapper .dropdown-menu-wrapper a.selected span {
+          display: block; }
+  #csv_onboarding_app_container #review .review-table-wrapper .dropdown-menu-wrapper.show {
+    display: block; }
+  #csv_onboarding_app_container #review .review-table-wrapper .monster-table:not(.dropdown-menu-wrapper) th:last-child, #csv_onboarding_app_container #review .review-table-wrapper .monster-table:not(.no-actions) td:last-child {
+    text-align: left; }
+
+#csv_onboarding_app_container #review .review-table-wrapper .column-data {
+  text-transform: none;
+  cursor: pointer; }
+
+#csv_onboarding_app_container #review .actions {
+  margin-top: 15px;
+  text-align: right; }
+
+#csv_onboarding_app_container #review .actions > * {
+  margin-left: 15px; }
+
+#csv_onboarding_app_container #review .headline {
+  min-width: 250px;
+  width: 30%;
+  text-align: left; }
+  #csv_onboarding_app_container #review .headline .review-row {
+    margin-bottom: 0.5rem; }
+    #csv_onboarding_app_container #review .headline .review-row .text {
+      display: inline-block;
+      width: 50%;
+      text-align: right; }
+    #csv_onboarding_app_container #review .headline .review-row .highlight {
+      font-weight: bold;
+      margin-left: 1rem; }
+
+#csv_onboarding_app_container #review .information-row {
+  display: block;
+  height: 90px; }
+
+#csv_onboarding_app_container #review .message {
+  background-color: #b8deff;
+  padding: 1rem;
+  font-size: 12px;
+  width: 40%;
+  text-align: left;
+  float: left; }
+  #csv_onboarding_app_container #review .message .info-icon {
+    margin-right: 12px;
+    position: relative;
+    bottom: 3px;
+    display: block;
+    float: left;
+    padding-bottom: 32px; }
+    #csv_onboarding_app_container #review .message .info-icon svg {
+      height: 1.5rem;
+      width: 1.5rem; }
+  #csv_onboarding_app_container #review .message .capitalize {
+    text-transform: capitalize;
+    margin-right: 2px; }
+
+#csv_onboarding_app_container #review .validation {
+  float: right;
+  position: relative;
+  top: 65px; }
+  #csv_onboarding_app_container #review .validation .validation-icon {
+    position: relative;
+    right: 5px;
+    bottom: 2px; }
+  #csv_onboarding_app_container #review .validation .bold {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 2px; }
+
+#csv_onboarding_app_container #review .column-selector {
+  width: 150px;
+  background: white;
+  border: 1px solid #c0c0c9;
+  padding: 5px;
+  margin-bottom: 8px; }
+  #csv_onboarding_app_container #review .column-selector .arrow {
+    float: right; }
+
+/* Progress */
+#csv_onboarding_app_container {
+  text-align: center; }
+
+#csv_onboarding_app_container .main-title {
+  font-size: 32px;
+  margin-top: 15px; }
+
+#csv_onboarding_app_container .sub-title {
+  color: #808089;
+  font-style: italic;
+  margin-top: 30px; }
+
+#csv_onboarding_app_container .spinner-wrapper {
+  margin-top: 20px; }
+
+#csv_onboarding_app_container .progress-display {
+  margin-top: 20px; }
+
+#csv_onboarding_app_container .progress-bar {
+  display: block;
+  border: 1px solid #e0e0e9;
+  width: 200px;
+  margin: 10px auto;
+  height: 30px;
+  border-radius: 2px; }
+
+#csv_onboarding_app_container .inner-progress-bar {
+  height: 100%;
+  width: 0px;
+  background: #2297FF; }
+
+/* Customizations */
+#csv_onboarding_app_container .customization-columns-wrapper {
+  display: flex;
+  margin-top: 30px; }
+
+#csv_onboarding_app_container .customization-columns-wrapper > div {
+  flex: 1; }
+
+#csv_onboarding_app_container .column-input {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5px;
+  height: 300px; }
+
+#csv_onboarding_app_container .column-input textarea {
+  height: 250px;
+  padding: 0;
+  width: 100%; }
+
+#csv_onboarding_app_container .column-input .json-result {
+  text-align: left; }
+
+#csv_onboarding_app_container .box-progress {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px; }
+  #csv_onboarding_app_container .box-progress .title {
+    margin: 1rem 0;
+    font-size: 16px;
+    font-weight: bold; }

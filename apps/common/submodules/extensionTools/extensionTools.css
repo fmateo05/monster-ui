@@ -1,0 +1,33 @@
+#extension_tools_get_dialog {
+	min-width: 420px;
+	padding: 15px;
+}
+
+#extension_tools_get_dialog .existing-extensions-wrapper {
+	border-top: 1px solid #ddd;
+	margin-top: 25px;
+	max-height: 500px;
+}
+
+#extension_tools_get_dialog .table-title {
+	position: absolute;
+	margin-top: 32px;
+}
+
+#extension_tools_get_dialog #extension_number {
+	height: 24px;
+	margin: 0 15px;
+}
+
+#extension_tools_get_dialog .extension-selection-title {
+	display: inline-block;
+	width: 163px;
+}
+
+#extension_tools_get_dialog .monster-invalid {
+	left: 197px;
+}
+
+#extension_tools_get_dialog #extension_listing_dialog_table {
+	margin-bottom: 15px;
+}

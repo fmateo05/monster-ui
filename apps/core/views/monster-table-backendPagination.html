@@ -1,0 +1,17 @@
+<div class="backend-pagination{{#if isFull}} full{{/if}}">
+	<div class="partial-load">
+		<span class="title" data-original-title="{{i18n.backendPagination.help}}" data-placement="top" data-toggle="tooltip">
+			{{i18n.backendPagination.title}}
+		</span>
+		<button class="load-more monster-button-secondary monster-button-fit">{{i18n.backendPagination.loadMore}}</button>
+		{{#if allowLoadAll}}
+			<button class="load-all monster-button-secondary monster-button-fit">{{i18n.backendPagination.loadAll}}</button>
+		{{/if}}
+	</div>
+
+	<div class="full-load">
+		<span class="title monster-green">
+			{{i18n.backendPagination.entireDataSetLoaded}}
+		</span>
+	</div>
+</div>

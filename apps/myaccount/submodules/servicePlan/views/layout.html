@@ -1,0 +1,75 @@
+<div class="service-plan-content-wrapper">
+	{{#if hasServicePlan}}
+		<div class="title-bar clearfix">
+		{{#if showDueDate}}
+			<div class="title-box">
+				<div class="value">
+					{{toFriendlyDate dueDate 'date'}}
+				</div>
+				<div class="title">
+					{{ i18n.servicePlan.dueOn }}
+				</div>
+			</div>
+		{{/if}}
+			<div class="title-box pull-right">
+				<div class="value">
+					{{ formatPrice totalAmount 2 }}
+				</div>
+				<div class="title">
+					{{ i18n.servicePlan.dueAmount }}
+				</div>
+			</div>
+		</div>
+
+	{{#if showActions}}
+		<div class="action-bar">
+			<button type="button" id="download" class="action-number monster-button-secondary">
+				<i class="fa fa-download"></i>
+				{{ i18n.download }}
+			</button>
+		</div>
+	{{/if}}
+
+		{{#each invoices}}
+		<div class="table-content">
+			{{#if @root.showBookkeeper}}
+				<h3>
+					{{bookkeeper}}
+				</h3>
+			{{/if}}
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th>
+						<th>{{ @root.i18n.servicePlan.serviceTitle }}</th>
+						<th>{{ @root.i18n.servicePlan.rateTitle }}</th>
+						<th>{{ @root.i18n.servicePlan.quantityTitle }}</th>
+						<th>{{ @root.i18n.servicePlan.discount }}</th>
+						<th>{{ @root.i18n.servicePlan.monthlyChargesTitle }}</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each items}}
+						<tr>
+							<td></td>
+							<td>{{name}}</td>
+							<td>{{ formatPrice rate 2 }}</td>
+							<td>{{ quantity }}</td>
+							<td>{{  discount }}</td>
+							<td>{{ formatPrice monthlyCharges 2 }}</td>
+							<td></td>
+						</tr>
+					{{else}}
+						<tr>
+							<td colspan="7" class="no-data">{{ @root.i18n.servicePlan.empty }}</td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		{{/each}}
+		</div>
+	{{else}}
+		<div class="alert">{{ i18n.servicePlan.none }}</div>
+	{{/if}}
+</div>

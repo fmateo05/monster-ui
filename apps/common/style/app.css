@@ -1,0 +1,231 @@
+@import url(../submodules/accountAncestors/accountAncestors.css);
+@import url(../submodules/accountBrowser/accountBrowser.css);
+@import url(../submodules/appSelector/appSelector.css);
+@import url(../submodules/buyNumbers/buyNumbers.css);
+@import url(../submodules/callerId/callerId.css);
+@import url(../submodules/e911/e911.css);
+@import url(../submodules/failover/failover.css);
+@import url(../submodules/numbers/numbers.css);
+@import url(../submodules/chooseModel/chooseModel.css);
+@import url(../submodules/carrierSelector/carrierSelector.css);
+@import url(../submodules/servicePlanDetails/servicePlanDetails.css);
+@import url(../submodules/ringingDurationControl/ringingDurationControl.css);
+@import url(../submodules/numberPrepend/numberPrepend.css);
+@import url(../submodules/numberMessaging/numberMessaging.css);
+@import url(../submodules/navigationWizard/navigationWizard.css);
+@import url(../submodules/numberSelector/numberSelector.css);
+@import url(../submodules/monsterListing/monsterListing.css);
+@import url(../submodules/extensionTools/extensionTools.css);
+@import url(../submodules/mediaSelect/mediaSelect.css);
+@import url(../submodules/portListing/portListing.css);
+@import url(../submodules/portWizard/portWizard.css);
+@import url(../submodules/conferenceViewer/conferenceViewer.css);
+@import url(../submodules/numberRenameCarrier/numberRenameCarrier.css);
+@import url(../submodules/storageSelector/storageSelector.css);
+@import url(../submodules/storagePlanManager/storagePlanManager.css);
+@import url(../submodules/deleteSmartUser/deleteSmartUser.css);
+@import url(../submodules/dragableUploads/dragableUploads.css);
+.service-plan-item-editor-dialog .service-plan-item-editor-content {
+  width: 850px;
+  max-width: inherit;
+  max-height: inherit;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  /* Details step */ }
+  .service-plan-item-editor-dialog .service-plan-item-editor-content .field-selector-wrapper {
+    padding: 2rem; }
+    .service-plan-item-editor-dialog .service-plan-item-editor-content .field-selector-wrapper .control-group {
+      margin: 0; }
+  .service-plan-item-editor-dialog .service-plan-item-editor-content .field-editor-wrapper {
+    flex: 1;
+    overflow-y: auto; }
+  .service-plan-item-editor-dialog .service-plan-item-editor-content fieldset {
+    padding: 0 2rem; }
+  .service-plan-item-editor-dialog .service-plan-item-editor-content .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 1rem 2rem; }
+    .service-plan-item-editor-dialog .service-plan-item-editor-content .form-actions > *:not(:first-child) {
+      margin-left: 1rem; }
+  .service-plan-item-editor-dialog .service-plan-item-editor-content .sub-input input {
+    margin-top: 10px; }
+  .service-plan-item-editor-dialog .service-plan-item-editor-content .cascade-help p {
+    margin-bottom: 2px;
+    font-size: 12px; }
+  .service-plan-item-editor-dialog .service-plan-item-editor-content .rate-container {
+    margin-bottom: 15px;
+    display: flex; }
+    .service-plan-item-editor-dialog .service-plan-item-editor-content .rate-container .rate-table {
+      width: 80%;
+      margin: auto;
+      margin-top: 0; }
+      .service-plan-item-editor-dialog .service-plan-item-editor-content .rate-container .rate-table td:not(:last-child) {
+        text-align: center; }
+      .service-plan-item-editor-dialog .service-plan-item-editor-content .rate-container .rate-table td.actions-cell i {
+        margin-left: 10px;
+        cursor: pointer; }
+    .service-plan-item-editor-dialog .service-plan-item-editor-content .rate-container .monster-checkbox {
+      display: block; }
+    .service-plan-item-editor-dialog .service-plan-item-editor-content .rate-container .current-rate-table {
+      width: 20%;
+      margin-right: 5%;
+      float: left; }
+    .service-plan-item-editor-dialog .service-plan-item-editor-content .rate-container .current-rate-table td {
+      line-height: 30px; }
+    .service-plan-item-editor-dialog .service-plan-item-editor-content .rate-container .rate-table {
+      float: left;
+      width: 75%; }
+
+/* _colors.scss */
+/* unique color names */
+/* semantic color names */
+.csv-uploader-common-control-container {
+  min-width: 448px;
+  margin: 0; }
+  .csv-uploader-common-control-container .form-content {
+    padding: 2rem 1rem; }
+    .csv-uploader-common-control-container .form-content .control-group {
+      margin: 0; }
+      .csv-uploader-common-control-container .form-content .control-group:not(:first-child) {
+        margin-top: 40px; }
+      .csv-uploader-common-control-container .form-content .control-group .file-upload {
+        display: flex;
+        position: relative;
+        margin: 0; }
+        .csv-uploader-common-control-container .form-content .control-group .file-upload input[type="text"] {
+          z-index: 1;
+          width: 100%;
+          height: 30px;
+          border-top-left-radius: 2px;
+          border-bottom-left-radius: 2px; }
+        .csv-uploader-common-control-container .form-content .control-group .file-upload label.monster-invalid {
+          bottom: -20px; }
+      .csv-uploader-common-control-container .form-content .control-group .download-link {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem; }
+        .csv-uploader-common-control-container .form-content .control-group .download-link svg {
+          margin-right: .5rem;
+          color: #606069; }
+        .csv-uploader-common-control-container .form-content .control-group .download-link .text {
+          color: #2297FF; }
+  .csv-uploader-common-control-container .form-actions {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; }
+    .csv-uploader-common-control-container .form-actions > *:not(:last-child) {
+      margin-right: 12px; }
+
+.cid-number-common-control-container #form_add_cid_number {
+  max-width: 500px;
+  margin: 0;
+  padding: 20px 15px; }
+  .cid-number-common-control-container #form_add_cid_number p {
+    margin-bottom: 20px; }
+  .cid-number-common-control-container #form_add_cid_number .control-group {
+    margin: 0; }
+  .cid-number-common-control-container #form_add_cid_number .btn-group > button:first-child {
+    font-size: 15px; }
+  .cid-number-common-control-container #form_add_cid_number .btn-group .dropdown-menu {
+    width: 100%; }
+    .cid-number-common-control-container #form_add_cid_number .btn-group .dropdown-menu::before, .cid-number-common-control-container #form_add_cid_number .btn-group .dropdown-menu::after {
+      display: none; }
+  .cid-number-common-control-container #form_add_cid_number .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .cid-number-common-control-container #form_add_cid_number .controls input {
+      margin: 0;
+      height: 28px; }
+
+.cid-number-common-control-container #form_verify_pin {
+  width: 650px;
+  margin: 0;
+  padding: 20px 0 0; }
+  .cid-number-common-control-container #form_verify_pin p {
+    margin-bottom: 30px;
+    padding: 0 15px; }
+  .cid-number-common-control-container #form_verify_pin .control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 15px; }
+    .cid-number-common-control-container #form_verify_pin .control-group .input-wrapper input {
+      -webkit-transition: none;
+      transition: none;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      text-align: center;
+      background-color: #F3F6F9;
+      border-color: #F3F6F9;
+      color: #3F4254;
+      margin: .5rem;
+      border-radius: .25rem;
+      padding: 0;
+      box-sizing: border-box;
+      transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease; }
+      .cid-number-common-control-container #form_verify_pin .control-group .input-wrapper input:active, .cid-number-common-control-container #form_verify_pin .control-group .input-wrapper input:focus {
+        outline: 0;
+        background-color: #EBEDF3;
+        border-color: #2297FF;
+        color: #3F4254;
+        transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease; }
+    .cid-number-common-control-container #form_verify_pin .control-group .notifications {
+      margin-top: 10px;
+      height: 10px; }
+      .cid-number-common-control-container #form_verify_pin .control-group .notifications .error {
+        display: none;
+        color: #FF3D24; }
+      .cid-number-common-control-container #form_verify_pin .control-group .notifications .verifying {
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        color: #33DB24; }
+        .cid-number-common-control-container #form_verify_pin .control-group .notifications .verifying i {
+          color: #33DB24;
+          margin-right: 5px; }
+      .cid-number-common-control-container #form_verify_pin .control-group .notifications.error .error {
+        display: block; }
+      .cid-number-common-control-container #form_verify_pin .control-group .notifications.verifying .verifying {
+        display: flex; }
+  .cid-number-common-control-container #form_verify_pin .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 0; }
+    .cid-number-common-control-container #form_verify_pin .form-actions:before, .cid-number-common-control-container #form_verify_pin .form-actions:after {
+      display: none; }
+    .cid-number-common-control-container #form_verify_pin .form-actions .help {
+      display: flex;
+      flex-direction: column; }
+      .cid-number-common-control-container #form_verify_pin .form-actions .help a {
+        margin-left: 4px;
+        color: #2297FF;
+        cursor: pointer;
+        text-decoration: underline; }
+        .cid-number-common-control-container #form_verify_pin .form-actions .help a:hover {
+          text-decoration: none; }
+        .cid-number-common-control-container #form_verify_pin .form-actions .help a.sent {
+          color: #33DB24;
+          text-decoration: none;
+          cursor: default; }
+
+/* Hack because of otpimization: can't have relative paths since the folder hierarchy changes after optimization */
+.trunkstore_popup.cnam .left_image {
+  background: url("static/images/cid_phone.png") center no-repeat; }
+
+.trunkstore_popup.e911 .e911_image {
+  background: url("static/images/e911_image.png") no-repeat center; }
+
+.trunkstore_popup.failover .header {
+  background: url("static/images/failover_header.png") no-repeat center; }
+
+#buy_number #vanity_search_div .dialpad_img {
+  background: url("static/images/dialpad.png") no-repeat center; }
+
+#vanity_country_select, #tollfree_country_select, #regular_country_select {
+  background-image: url("static/images/US_flag.png");
+  background-repeat: no-repeat; }

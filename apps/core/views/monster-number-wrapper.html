@@ -1,0 +1,10 @@
+<div class="monster-phone-number-wrapper" data-e164="{{numberData.e164Number}}" data-number="{{ numberData.originalNumber }}">
+	<span class="monster-phone-number-value">{{ numberData.formattedNumber }}</span>
+	{{#unless options.hideFlag}}
+		{{#if numberData.country}}
+			<span class="monster-number-flag flag{{#unless numberData.country.code}} empty{{/unless}}" data-toggle="tooltip" data-placement="right" data-original-title="{{ numberData.country.name }}">
+				<img src="css/assets/flags/16/{{ numberData.country.code }}.png" height="16" width="16"></img>
+			</span>
+		{{/if}}
+	{{/unless}}
+</div>

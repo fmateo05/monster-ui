@@ -1,0 +1,52 @@
+{
+	"name": "numbers",
+	"i18n": {
+		"de-DE": {
+			"label": "Nummern",
+			"description": "Mithilfe der Numbers-App können Sie Nummern kaufen, portieren und in Ihrem Account ganz leicht verwalten.",
+			"extended_description": "Die Numbers-App ermöglicht es Ihnen, eine Grundauswahl von Telefonnummern zu erwerben und in einem Master-Account zu verwalten. Von dort aus können Nummern dann an Kunden zur Nutzung weitergegeben werden. Werden die Nummern nicht mehr benötigt, können sie jederzeit problemlos zurückgeholt und anderen Kunden zugewiesen werden. Nummernblöcke und Dienste können auch reserviert und verteilt werden. Um die Verwaltung zu vereinfachen, wird zwischen Nummern, die in Gebrauch sind, und freien Nummern deutlich unterschieden. Die Numbers-App unterstützt das Verwalten von CNAM-Datenbank-Updates, das Nachschlagen von Namen eingehender Anrufer und Notrufservices.",
+			"features": [
+				"Neue Nummern kaufen",
+				"Nummern löschen",
+				"Nummern von anderen Netzanbietern portieren",
+				"Für jede Nummer eine Anrufer-ID festlegen",
+				"Eine Failover-Nummer festlegen",
+				"Mit jeder Nummer eine e911-Adresse verknüpfen",
+				"Konfigurierbare CNAM-Dips"
+			]
+		},
+		"en-US": {
+			"label": "Numbers",
+			"description": "The Numbers app allows you to easily buy, port and manage all numbers in your account.",
+			"extended_description": "The Numbers app allows you to purchase and manage a base set of phone numbers in a master account. From there, numbers can be distributed to customers for use. When the numbers are no longer needed, they can be reclaimed easily and re-assigned to other customers at any time.Blocks of numbers and services can also be reserved and distributed. A clear distinction between numbers in-use and spare numbers is made to simplify management. The Numbers app supports managing CNAM database updates, inbound caller ID name lookups and emergency 911 services.",
+			"features": [
+				"Purchase new numbers",
+				"Delete numbers",
+				"Port numbers from other carriers",
+				"Set a Caller ID for each number",
+				"Set a Failover Number",
+				"Associate e911 address to each number",
+				"Configurable CNAM dips"
+			]
+		}
+	},
+	"tags": [
+		"admin"
+	],
+	"icon": "Numbers_app.png",
+	"api_url": "http://10.26.0.41:8000/v2",
+	"author": "2600Hz",
+	"version": "1.0",
+	"license": "-",
+	"price": 0,
+	"screenshots": [
+		"numbers1.png",
+		"numbers2.png"
+	],
+	"urls": {
+		"documentation": "{documentation_url}",
+		"howto": "{howto_video_url}"
+	},
+	"phase": "gold",
+	"pvt_type": "app"
+}

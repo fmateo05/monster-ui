@@ -1,0 +1,83 @@
+/* _colors.scss */
+/* unique color names */
+/* semantic color names */
+/* e911 POPUP */
+.trunkstore_popup.e911 {
+  margin-bottom: 0;
+  width: 510px; }
+  .trunkstore_popup.e911 .row-fluid {
+    padding: 0 15px;
+    box-sizing: border-box; }
+    .trunkstore_popup.e911 .row-fluid:first-child {
+      padding: 15px 15px 0; }
+    .trunkstore_popup.e911 .row-fluid:last-child {
+      padding: 0 15px 15px; }
+  .trunkstore_popup.e911 .e911-title {
+    margin-left: 320px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px; }
+  .trunkstore_popup.e911 .rotated-text {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    text-transform: uppercase;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ccc; }
+  .trunkstore_popup.e911 .e911_image {
+    width: 80px;
+    height: 265px;
+    margin: 0 10px 0 30px; }
+  .trunkstore_popup.e911 .control-group {
+    margin-bottom: 10px; }
+  .trunkstore_popup.e911 .control-group .control-label {
+    width: 140px;
+    padding-top: 10px; }
+  .trunkstore_popup.e911 .control-group .controls {
+    margin-left: 160px; }
+  .trunkstore_popup.e911 .control-group .controls input,
+  .trunkstore_popup.e911 .control-group .controls textarea {
+    width: 186px;
+    padding: 10px 5px; }
+  .trunkstore_popup.e911 .control-group .controls button {
+    width: 200px;
+    text-transform: uppercase; }
+  .trunkstore_popup.e911 .e911_text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px; }
+  .trunkstore_popup.e911 .form-actions {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    margin-bottom: 0;
+    padding: 15px; }
+    .trunkstore_popup.e911 .form-actions::before, .trunkstore_popup.e911 .form-actions::after {
+      content: none; }
+    .trunkstore_popup.e911 .form-actions .actions-group > *:not(:last-child) {
+      margin-right: 10px; }
+
+/* MULTIPLE ADDRESSES POPUP */
+.e911-address-dialog {
+  padding: 15px;
+  width: 400px; }
+
+.e911-address-dialog .list-choices {
+  margin-bottom: 20px; }
+
+.e911-address-dialog .list-choices .address-option {
+  background-color: #EEE;
+  padding: 20px;
+  border: 1px solid #CCC;
+  margin-bottom: 5px; }
+
+.e911-address-dialog .list-choices .address-option:hover {
+  background-color: #FFF;
+  cursor: pointer; }
+
+.e911-address-dialog .list-choices .address-option.active {
+  background-color: #FFF;
+  border-color: #2297FF; }

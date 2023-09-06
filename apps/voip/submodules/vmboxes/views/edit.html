@@ -1,0 +1,269 @@
+<div class="edit-vmbox" data-id="{{id}}">
+	<div class="title-bar clearfix">
+		<div class="vmbox-title pull-left">
+			<div class="vmbox-icon">
+				<i class="icon-telicon-voicemail"></i>
+			</div>
+
+			{{#if id}}
+				<div class="vmbox-model">{{ name }}</div>
+			{{else}}
+				<div class="vmbox-model">{{ i18n.vmboxes.new }}</div>
+			{{/if}}
+		</div>
+
+		<ul class="nav nav-pills pull-right">
+			<li class="tabs-main-selector main-section active">
+				<a class="tabs-selector change-section" data-section="basic" href="javascript:void(0)">
+					{{ i18n.vmboxes.popupSettings.basicTitle }}
+				</a>
+			</li>
+			<li class="tabs-main-selector main-section dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+					{{ i18n.vmboxes.popupSettings.advancedTitle }}
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu pull-right">
+					<li>
+						<a class="tabs-selector change-section" data-section="options" href="javascript:void(0)">
+							<i class="fa fa-cog"></i>
+							{{ i18n.vmboxes.popupSettings.options.menuTitle }}
+						</a>
+					</li>
+					<li>
+						<a class="tabs-selector change-section" data-section="recipients" href="javascript:void(0)">
+							<i class="fa fa-envelope"></i>
+							{{ i18n.vmboxes.popupSettings.recipients.menuTitle }}
+						</a>
+					</li>
+					<li>
+						<a class="tabs-selector change-section" data-section="greeting" href="javascript:void(0)">
+							<i class="fa icon-telicon-voicemail"></i>
+							{{ i18n.vmboxes.popupSettings.greeting.menuTitle }}
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="content">
+		<form id="form_vmbox" class="form-horizontal">
+			<div class="tabs-section active" data-section="basic">
+				<div class="control-group">
+					<label class="control-label" for="name">{{ i18n.vmboxes.popupSettings.basic.name.label }}</label>
+					<div class="controls">
+						<input type="text" id="name" name="name" value="{{ name }}">
+					</div>
+				</div>
+
+			{{#isFeatureAvailable "smartpbx.vmboxes.settings.voicemailNumber.manage"}}
+				<div class="control-group">
+					<label class="control-label" for="name">{{ i18n.vmboxes.popupSettings.basic.number.label }}</label>
+					<div class="controls">
+						<input type="text" id="mailbox" name="mailbox" value="{{ mailbox }}">
+					</div>
+				</div>
+			{{/isFeatureAvailable}}
+
+				<div class="control-group">
+					<label class="control-label" for="name">{{ i18n.vmboxes.popupSettings.basic.pinNumber.label }}</label>
+					<div class="controls">
+						<input type="text" id="pin" name="pin" value="{{ pin }}">
+					</div>
+				</div>
+			</div>
+
+			<div class="tabs-section" data-section="options">
+				<div class="title">
+					{{ i18n.vmboxes.popupSettings.options.sectionTitle }}
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="timezone">{{ i18n.vmboxes.popupSettings.options.timezone.label }}</label>
+					<div class="controls">
+						<select id="timezone" name="timezone" data-original_value="{{timezone}}"></select>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="timezone">{{ i18n.vmboxes.popupSettings.options.mediaExtension.label }}</label>
+					<div class="controls">
+						<select name="media_extension" id="media_extension">
+							{{#select media_extension}}
+								<option value="default">{{ i18n.vmboxes.popupSettings.options.mediaExtension.default }}</option>
+								<option value="mp3">{{ i18n.vmboxes.popupSettings.options.mediaExtension.mp3 }}</option>
+								<!-- <option value="mp4">{{ i18n.callflows.vmbox.mp4 }}</option> -->
+								<option value="wav">{{ i18n.vmboxes.popupSettings.options.mediaExtension.wav }}</option>
+							{{/select}}
+						</select>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-input checkbox">
+						<div data-toggle="tooltip" data-placement="right" data-original-title="{{ i18n.vmboxes.popupSettings.options.alreadySetup.help }}">
+							{{#monsterCheckbox i18n.vmboxes.popupSettings.options.alreadySetup.label}}
+								<input type="checkbox" name="is_setup" id="is_setup" {{#if is_setup }}checked{{/if}} />
+							{{/monsterCheckbox}}
+						</div>
+					</label>
+				</div>
+
+				<div class="control-group">
+					<label class="control-input checkbox">
+						<div data-toggle="tooltip" data-placement="right" data-original-title="{{ i18n.vmboxes.popupSettings.options.requirePIN.help }}">
+							{{#monsterCheckbox i18n.vmboxes.popupSettings.options.requirePIN.label}}
+								<input type="checkbox" name="require_pin" id="require_pin" {{#if require_pin }}checked{{/if}} />
+							{{/monsterCheckbox}}
+						</div>
+					</label>
+				</div>
+
+				<div class="control-group">
+					<label class="control-input checkbox">
+						<div data-toggle="tooltip" data-placement="right" data-original-title="{{ i18n.vmboxes.popupSettings.options.autoLogin.help }}">
+							{{#monsterCheckbox i18n.vmboxes.popupSettings.options.autoLogin.label}}
+								<input type="checkbox" name="check_if_owner" id="check_if_owner" {{#if check_if_owner }}checked{{/if}} />
+							{{/monsterCheckbox}}
+						</div>
+					</label>
+				</div>
+
+				<div class="control-group">
+					<label class="control-input checkbox">
+						<div data-toggle="tooltip" data-placement="right" data-original-title="{{ i18n.vmboxes.popupSettings.options.skipGreetings.help }}">
+							{{#monsterCheckbox i18n.vmboxes.popupSettings.options.skipGreetings.label}}
+								<input type="checkbox" name="skip_greeting" id="skip_greeting" {{#if skip_greeting }}checked{{/if}} />
+							{{/monsterCheckbox}}
+						</div>
+					</label>
+				</div>
+
+				<div class="control-group">
+					<label class="control-input checkbox{{#if announcement_only}} disabled{{/if}}">
+						<div data-toggle="tooltip" data-placement="right" data-original-title="{{ i18n.vmboxes.popupSettings.options.skipInstructions.help }}">
+							{{#monsterCheckbox i18n.vmboxes.popupSettings.options.skipInstructions.label}}
+								<input type="checkbox" name="skip_instructions" id="skip_instructions" {{#if skip_instructions }}checked{{/if}} {{#if announcement_only}}checked disabled{{/if}} />
+							{{/monsterCheckbox}}
+						</div>
+					</label>
+					<input id="skip_instructions_input" type="hidden" value="{{skip_instructions}}">
+				</div>
+
+				<div class="control-group">
+					<label class="control-input checkbox">
+						<div data-toggle="tooltip" data-placement="right" data-original-title="{{ i18n.vmboxes.popupSettings.options.announceOnly.help }}">
+							{{#monsterCheckbox i18n.vmboxes.popupSettings.options.announceOnly.label}}
+								<input type="checkbox" name="announcement_only" id="announcement_only" {{#if announcement_only }}checked{{/if}} />
+							{{/monsterCheckbox}}
+						</div>
+					</label>
+				</div>
+
+				<div class="control-group">
+					<label class="control-input checkbox">
+						<div data-toggle="tooltip" data-placement="right" data-original-title="{{ i18n.vmboxes.popupSettings.options.deleteAfterNotify.help }}">
+							{{#monsterCheckbox i18n.vmboxes.popupSettings.options.deleteAfterNotify.label}}
+								<input type="checkbox" name="delete_after_notify" id="delete_after_notify" {{#if delete_after_notify }}checked{{/if}} />
+							{{/monsterCheckbox}}
+						</div>
+					</label>
+				</div>
+
+				<div class="control-group">
+					<label class="control-input checkbox">
+						<div data-toggle="tooltip" data-placement="right" data-original-title="{{ i18n.vmboxes.popupSettings.options.emailAsAttachment.help }}">
+							{{#monsterCheckbox i18n.vmboxes.popupSettings.options.emailAsAttachment.label}}
+								<input type="checkbox" name="include_message_on_notify" id="include_message_on_notify" {{#if include_message_on_notify }}checked{{/if}} />
+							{{/monsterCheckbox}}
+						</div>
+					</label>
+				</div>
+
+				{{#if hasTranscribe}}
+				<div class="control-group">
+					<label class="control-input checkbox">
+						<div data-toggle="tooltip" data-placement="right" data-original-title="{{ i18n.vmboxes.popupSettings.options.transcription.help }}">
+							{{#monsterCheckbox i18n.vmboxes.popupSettings.options.transcription.label}}
+								<input type="checkbox" name="transcribe" id="transcription" {{#if transcribe }}checked{{/if}} />
+							{{/monsterCheckbox}}
+						</div>
+					</label>
+				</div>
+				{{/if}}
+
+				<div class="control-group">
+					<label class="control-input checkbox">
+						<div data-toggle="tooltip" data-placement="right" data-original-title="{{ i18n.vmboxes.popupSettings.options.configurable.help }}">
+							{{#monsterCheckbox i18n.vmboxes.popupSettings.options.configurable.label}}
+								<input type="checkbox" name="extra.configurable" id="not_configurable" {{#unless not_configurable }}checked{{/unless}} />
+							{{/monsterCheckbox}}
+						</div>
+					</label>
+				</div>
+			</div>
+
+			<div class="tabs-section" data-section="recipients">
+				<div class="title">
+					{{ i18n.vmboxes.popupSettings.recipients.sectionTitle }}
+				</div>
+
+				<div class="helper">
+					<i class="fa fa-info-circle"></i>
+					{{ i18n.vmboxes.popupSettings.recipients.header }}
+				</div>
+
+				<div class="list-entities emails-list">
+					<div class="create-entity">
+						<div class="entity-wrapper placeholder">
+							<div class="create-text">
+								<i class="fa fa-plus-circle"></i>
+								{{ i18n.vmboxes.popupSettings.recipients.create }}
+							</div>
+
+							<div class="create-inputs">
+								{{ i18n.vmboxes.popupSettings.recipients.email }}
+								<input type="text" id="entity_name" name="extra.entityName" class="input-medium">
+								<button id="add_entity" class="monster-button monster-button-success">{{ i18n.add }}</button>
+								<a href="javascript:void(0);" id="cancel_entity">{{ i18n.cancel }}</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="saved-entities">
+					</div>
+				</div>
+			</div>
+
+			<div class="tabs-section" data-section="greeting">
+				<div class="title">
+					{{ i18n.vmboxes.popupSettings.greeting.sectionTitle }}
+				</div>
+
+				<div class="greeting-container"></div>
+
+				<div class="temporary-greeting-container"></div>
+			</div>
+		</form>
+	</div>
+
+	<div class="actions clearfix">
+	{{#isFeatureAvailable "smartpbx.vmboxes.settings.delete"}}
+		{{#if id}}
+			<a id="delete_vmbox" class="monster-link"><i class="fa fa-trash-o monster-red"></i>{{ i18n.vmboxes.deleteVmbox }}</a>
+		{{/if}}
+	{{/isFeatureAvailable}}
+
+		<div class="pull-right">
+			<a class="cancel-link monster-link blue" href="javascript:void(0);">{{ i18n.cancel }}</a>
+			<button type="button" class="monster-button monster-button-success save">
+				{{#if id}}
+					{{ i18n.saveChanges }}
+				{{else}}
+					{{ i18n.vmboxes.createVmbox }}
+				{{/if}}
+			</button>
+		</div>
+	</div>
+</div>

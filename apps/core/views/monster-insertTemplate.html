@@ -1,0 +1,13 @@
+<div class="{{#if cssClass}}{{cssClass}}{{else}}app-content{{#unless hasBackground}} no-background{{/unless}}{{/if}} monster-loading-view"{{#if cssId}} id="{{cssId}}"{{/if}}>
+{{#if title}}
+	<h3 class="title">
+		{{title}}
+	</h3>
+{{/if}}
+{{#if text}}
+	<p class="text">
+		{{text}}
+	</p>
+{{/if}}
+	<i class="icon-telicon-loading-circle monster-loading-spinner"></i>
+</div>

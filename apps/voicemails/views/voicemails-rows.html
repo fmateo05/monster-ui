@@ -1,0 +1,71 @@
+{{#each voicemails}}
+	<tr class="voicemail-row" data-media-id="{{formatted.mediaId}}" data-call-id="{{formatted.callId}}" data-timestamp="{{timestamp}}" data-folder="{{folder}}">
+		<td style="width:20px;" class="select-cell" data-filter-value="{{formatted.callId}}">
+			{{#monsterCheckbox}}
+				<input class="select-message" type="checkbox" data-media-id="{{formatted.mediaId}}"/>
+			{{/monsterCheckbox}}
+			<div class="disable-cell-content"></div>
+		</td>
+		<td class="status select-line" data-folder="{{folder}}" data-sort-value="{{folder}}">
+			{{#compare folder "===" "new"}}
+				<span class="monster-badge-success">
+			{{else}}
+				{{#compare folder "===" "deleted"}}
+					<span class="monster-badge-danger">
+				{{else}}
+					<span class="monster-badge-neutral">
+				{{/compare}}
+			{{/compare}}
+				{{tryI18n @root.i18n.voicemails.receivedVMs.status folder}}
+			</span>
+		</td>
+		<!--<td class="select-line">{{call_id}}</td>-->
+		<td class="select-line no-padding" data-filter-value="{{timestamp}} {{toFriendlyDate timestamp}}" data-sort-value="{{timestamp}}">
+			<div class="top-line">{{toFriendlyDate timestamp 'date'}}</div>
+			<div class="bottom-line">{{toFriendlyDate timestamp 'time'}}</div>
+		</td>
+		{{#if formatted.showCallerIDName}}
+			<td class="select-line no-padding" data-filter-value="{{from}} {{formatted.from.value}} {{formatted.callerIDName.value}} {{formatted.from.userFormat}} {{formatted.callerIDName.userFormat}}" data-sort-value="{{formatted.from.value}} {{formatted.callerIDName.value}}" >
+				<div class="top-line">
+				{{#if formatted.callerIDName.isPhoneNumber}}
+					{{#monsterNumberWrapper formatted.callerIDName.value}}{{/monsterNumberWrapper}}
+				{{else}}
+					{{formatted.callerIDName.value}}
+				{{/if}}
+				</div>
+				<div class="bottom-line">
+				{{#if formatted.from.isPhoneNumber}}
+					{{#monsterNumberWrapper formatted.from.value}}{{/monsterNumberWrapper}}
+				{{else}}
+					{{formatted.from.value}}
+				{{/if}}
+				</div>
+			</td>
+		{{else}}
+			<td class="select-line" data-filter-value="{{from}} {{formatted.from.value}} {{formatted.callerIDName.value}} {{formatted.from.userFormat}} {{formatted.callerIDName.userFormat}}" data-sort-value="{{formatted.from.value}} {{formatted.callerIDName.value}}">
+			{{#if formatted.from.isPhoneNumber}}
+				{{#monsterNumberWrapper formatted.from.value}}{{/monsterNumberWrapper}}
+			{{else}}
+				{{formatted.from.value}}
+			{{/if}}
+			</td>
+		{{/if}}
+		<td class="select-line" data-filter-value="{{to}} {{formatted.to.value}} {{formatted.to.userFormat}}" data-sort-value="{{formatted.to.value}}">
+		{{#if formatted.to.isPhoneNumber}}
+			{{#monsterNumberWrapper formatted.to.value}}{{/monsterNumberWrapper}}
+		{{else}}
+			{{formatted.to.value}}
+		{{/if}}
+		</td>
+		<td class="duration select-line">
+			{{formatted.duration}}
+		</td>
+		<td class="actions">
+			<i class="fa fa-play-circle action-item play-vm"></i>
+			<a class="action-item" href="{{formatted.uri}}" target="_blank">
+				<i class="fa fa-download download-vm"></i>
+			</a>
+			<i class="fa fa-list action-item details-vm"></i>
+		</td>
+	</tr>
+{{/each}}

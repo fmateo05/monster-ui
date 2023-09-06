@@ -1,0 +1,50 @@
+{
+	"name": "voicemails",
+	"i18n": {
+		"de-DE": {
+			"label": "Voicemails",
+			"description": "Mit dieser App können Sie den Inhalt Ihrer Voicemailbox schnell und bequem verwalten. Außerdem können Sie mit dieser App auch remote auf Ihre Voicemails zugreifen sowie EVN-Details herunterladen, abrufen, anzeigen und vieles mehr. Ihre Administratoren können nach Account, Nummer oder Voicemailbox filtern, nach bestimmten Datumsbereichen suchen, Spalten sortieren und/oder Voicemail-Medien abspielen und herunterladen. Administratoren können alle in einem Account oder einer Voicemailbox befindlichen Voicemails auswählen, alte Voicemails aus ganzen Voicemailboxen oder Accounts löschen, den Voicemail-Status ändern und/oder Voicemails in eine andere Voicemailbox kopieren.",
+			"extended_description": "",
+			"features": [
+				"Voicemails verschieben und Status ändern",
+				"Voicemail abspielen",
+				"Voicemail herunterladen",
+				"Voicemail-Details anzeigen",
+				"Massenhafte Statusänderungen"
+			]
+		},
+		"en-US": {
+			"label": "Voicemails",
+			"description": "Voicemails allows you to quickly and easily manage the contents of your voicemail box. ",
+			"extended_description": "With Voicemails, access your voicemails remotely, take bulk actions, and move voicemails to other voicemail boxes as needed. In addition, your admins can filter voicemails by account, number, or voicemail box. Managing voicemails has never been easier!",
+			"features": [
+				"Access voicemails remotely",
+				"Listen to and download voicemails",
+				"View all voicemail details",
+				"Search by date range",
+				"Filter by status, date received, from number, target number and duration",
+				"View CDR details",
+				"Select single, multiple, or all (bulk) voicemails"
+			]
+		}
+	},
+	"tags": [
+		"admin"
+	],
+	"icon": "Voicemail_app.png",
+	"api_url": "http://10.26.0.41:8000/v2",
+	"author": "2600Hz",
+	"version": "1.0",
+	"license": "-",
+	"price": 0,
+	"screenshots": [
+		"Voicemails1.png",
+		"Voicemails2.png"
+	],
+	"urls": {
+		"documentation": "{documentation_url}",
+		"howto": "{howto_video_url}"
+	},
+	"phase": "gold",
+	"pvt_type": "app"
+}

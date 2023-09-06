@@ -1,0 +1,14 @@
+{{#each DIDs}}
+<div class="number-wrapper number-box" data-phone_number="{{ phoneNumber }}" data-search="{{phoneNumber}} {{ formatPhoneNumber phoneNumber }}">
+	<input type="checkbox"></input>
+	<span class="phone-number">{{#monsterNumberWrapper phoneNumber}}{{/monsterNumberWrapper}}</span>
+
+	<div class="number-options pull-right">
+		
+	</div>
+
+	<div class="features pull-right">
+		{{#numberFeatures features}}{{/numberFeatures}}
+	</div>
+</div>
+{{/each}}

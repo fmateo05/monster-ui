@@ -1,0 +1,76 @@
+<div class="debug-dialog">
+	<table class="table table-striped">
+		<tr>
+			<td>{{ i18n.debugAccountDialog.accountName }}</td>
+			<td>{{ account.name }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ i18n.debugAccountDialog.accountId }}</td>
+			<td>
+				<span class="to-copy">{{ account.id }}</span>
+				<a href="javascript:void(0);" class="copy-clipboard" data-original-title="{{ i18n.debugAccountDialog.copyToClipboard }}" data-placement="top" data-toggle="tooltip"><i class="fa fa-clipboard"></i></a>
+			</td>
+		</tr>
+
+		{{#unless hideURLs}}
+			<tr>
+				<td>{{ i18n.debugAccountDialog.apiUrl }}</td>
+				<td>
+					<span class="to-copy">{{ apiUrl }}</span>
+					<a href="javascript:void(0);" class="copy-clipboard" data-original-title="{{ i18n.debugAccountDialog.copyToClipboard }}" data-placement="top" data-toggle="tooltip"><i class="fa fa-clipboard"></i></a>
+				</td>
+			</tr>
+		{{/unless}}
+
+		<tr>
+			<td>{{ i18n.debugAccountDialog.authToken }}</td>
+			<td>
+				<span class="to-copy">{{ authToken }}</span>
+				<a href="javascript:void(0);" class="copy-clipboard" data-original-title="{{ i18n.debugAccountDialog.copyToClipboard }}" data-placement="top" data-toggle="tooltip"><i class="fa fa-clipboard"></i></a>
+			</td>
+		</tr>
+
+		{{#if socket.isConfigured}}
+			<tr>
+				<td>{{ i18n.debugAccountDialog.webSocket.title }}</td>
+				<td>
+					<div class="multi-line-div">
+						{{#if socket.isConnected}}
+							<i class="fa fa-circle monster-green"></i>&nbsp;
+							{{ i18n.debugAccountDialog.webSocket.connected }}
+						{{else}}
+							<i class="fa fa-circle monster-red"></i>&nbsp;
+							{{ i18n.debugAccountDialog.webSocket.disconnected }}
+						{{/if}}
+					</div>
+					<div class="multi-line-div">
+						{{#unless hideURLs}}
+							<span class="to-copy">{{ socket.uri }}</span>
+							<a href="javascript:void(0);" class="copy-clipboard" data-original-title="{{ i18n.debugAccountDialog.copyToClipboard }}" data-placement="top" data-toggle="tooltip"><i class="fa fa-clipboard"></i></a>
+						{{/unless}}
+					</div>
+				</td>
+			</tr>
+		{{/if}}
+
+	{{#with version}}
+		{{#if monster}}
+		<tr>
+			<td>{{ @root.i18n.debugAccountDialog.versioning.monster }}</td>
+			<td>{{ monster }}</td>
+		</tr>
+
+		<tr>
+			<td>{{ @root.i18n.debugAccountDialog.versioning.app.label }}</td>
+			<td>{{ app }}</td>
+		</tr>
+		{{/if}}
+
+		<tr>
+			<td>{{ @root.i18n.debugAccountDialog.versioning.kazoo }}</td>
+			<td>{{ kazoo }}</td>
+		</tr>
+	{{/with}}
+	</table>
+</div>

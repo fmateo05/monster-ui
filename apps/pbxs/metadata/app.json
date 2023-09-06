@@ -1,0 +1,39 @@
+{
+	"name": "pbxs",
+	"i18n": {
+		"en-US": {
+			"label": "PBX Connector",
+			"description": "PBX connector allows you to register any legacy PBX. Ideal for clients who are managing on premise PBXs from other vendors, or carriers looking to manage their endpoints seamlessly. PBX Connector lets you sell phone services to companies who wish to continue using legacy PBX systems. You can provide SIP trunks to devices such as Avaya, Cisco and Asterisk PBXes and increase revenue by taking on customers who don’t want to abandon their on-premise equipment but still wish cost and feature benefits of a VoIP service.",
+			"extended_description": "",
+			"features": [
+				"Compliant with all major IP PBXs (Avaya, Mitel, FreePBX, Asterisk, Cisco, etc)",
+				"Instant hybrid PBX setup ",
+				"Softswitch support",
+				"Multi-site support in a single account",
+				"Integrated number management",
+				"Customizable signaling and media",
+				"Failover and alternate routing",
+				"Support for inbound DIDs / DNIS"
+			]
+		}
+	},
+	"tags": [
+		"admin"
+	],
+	"icon": "PBXconnector_app.png",
+	"api_url": "http://10.26.0.41:8000/v2",
+	"author": "2600Hz",
+	"version": "1.0",
+	"license": "-",
+	"price": 0,
+	"screenshots": [
+		"pbxconnector1.png",
+		"pbxconnector2.png"
+	],
+	"urls": {
+		"documentation": "{documentation_url}",
+		"howto": "{howto_video_url}"
+	},
+	"phase": "gold",
+	"pvt_type": "app"
+}

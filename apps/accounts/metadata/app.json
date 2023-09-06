@@ -1,0 +1,50 @@
+{
+	"name": "accounts",
+	"i18n": {
+		"de-DE": {
+			"label": "Konten",
+			"description": "Die Accounts-App ermöglicht Ihnen das Erstellen, Anpassen und Verwalten Ihrer Kunden-Accounts.",
+			"extended_description": "Die Accounts-App ist das ideale Tool zum Verwalten vieler Kunden-Accounts. Unsere optimierte Benutzeroberfläche erspart Ihnen Zeit und Aufwand. Fügen Sie so viele Accounts wie erforderlich hinzu, was dank unserer echt mehrinstanzenfähigen Account-Struktur möglich ist. Weisen Sie jedem Sub-Account die gleichen Funktionen zu, wie der übergeordnete Account hat, setzen Sie Geräte und Accounts zurück, erzwingen Sie spezifische Beschränkungen oder schränken Sie ein, was für den Endbenutzer sichtbar sein soll – ganz wie Ihr Kunde es wünscht.",
+			"features": [
+				"Mehrinstanzenfähige Sub-Accounts",
+				"Nutzungssteuerung",
+				"Assistent für das Erstellen von Accounts",
+				"Anbieter- und Account-Einschränkungen",
+				"Einfache Navigation zwischen Ihren Accounts"
+			]
+		},
+		"en-US": {
+			"label": "Accounts",
+			"description": "Accounts is the ideal tool for easily managing all of your customer accounts. ",
+			"extended_description": "KAZOO’s streamlined interface and true multi-tenant account structure allows you to add as many accounts as necessary and to easily navigate between them. With Accounts, you have the flexibility to customize settings for each sub-account based on the customer’s individual needs or to apply all of the same settings to all of your sub-accounts.",
+			"features": [
+				"See an overview of each customer account",
+				"Choose which apps are enabled on each account",
+				"Set account-specific call limits and restrictions",
+				"Select the carrier strategy for each account",
+				"Enable and disable e911 and CNAM features",
+				"Create customized announcements and notes"
+			]
+		}
+	},
+	"tags": [
+		"reseller"
+	],
+	"icon": "Accounts_app.png",
+	"api_url": "http://10.26.0.41:8000/v2",
+	"author": "2600Hz",
+	"version": "1.0",
+	"license": "-",
+	"price": 0,
+	"screenshots": [
+		"Account-AvailableApps.png",
+		"Account-Limits.png",
+		"AccountOverview.png"
+	],
+	"urls": {
+		"documentation": "{documentation_url}",
+		"howto": "{howto_video_url}"
+	},
+	"phase": "gold",
+	"pvt_type": "app"
+}

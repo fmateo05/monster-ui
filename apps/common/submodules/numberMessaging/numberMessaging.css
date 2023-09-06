@@ -1,0 +1,18 @@
+.trunkstore_popup.numberMessaging {
+  width: 510px;
+  margin: 0; }
+  .trunkstore_popup.numberMessaging .popup-content {
+    padding: 15px 25px; }
+    .trunkstore_popup.numberMessaging .popup-content:not(:first-child) {
+      border-top: 1px solid #ccc; }
+    .trunkstore_popup.numberMessaging .popup-content .help-box {
+      margin-top: 20px; }
+  .trunkstore_popup.numberMessaging .popup-actions .cancel-link {
+    margin-right: 10px; }
+  .trunkstore_popup.numberMessaging .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 15px 25px; }
+    .trunkstore_popup.numberMessaging .form-actions > button:not(:last-child) {
+      margin-right: 10px; }

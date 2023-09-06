@@ -1,0 +1,30 @@
+<div class="monster-listing-numbers">
+	<div class="empty-search-row">
+		{{ labels.noMatch }}
+	</div>
+	{{#each dataList}}
+		<div class="monster-listing-box" data-id="{{this.phoneNumber}}" data-search="{{this.phoneNumber}} {{formatPhoneNumber this.phoneNumber}}">
+			<div class="checkbox-container">
+			{{#if ../singleSelect}}
+				{{#monsterRadio}}<input type="radio" name="listingbox"></input>{{/monsterRadio}}
+			{{else}}
+				{{#monsterCheckbox}}<input type="checkbox"></input>{{/monsterCheckbox}}
+			{{/if}}
+			</div>
+			<span class="phone-number">{{#monsterNumberWrapper this.phoneNumber}}{{/monsterNumberWrapper}}</span>
+
+			<div class="features pull-right">
+				{{#each this.viewFeatures}}
+					<i class="{{icon}} {{active}} help-popover" data-toggle="tooltip" data-placement="top" data-original-title="{{ help }}"></i>
+				{{/each}}
+				{{#compare this.state '===' 'port_in'}}
+					<i class="fa fa-exclamation-triangle monster-red active help-popover" data-toggle="tooltip" data-placement="top" data-original-title="{{@root.i18n.numbers.portIconHelp}}"></i>
+				{{/compare}}
+			</div>
+		</div>
+	{{else}}
+		<div class="monster-listing-box no-data">
+			{{ labels.noData }}
+		</div>
+	{{/each}}
+</div>

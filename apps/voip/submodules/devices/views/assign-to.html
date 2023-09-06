@@ -1,0 +1,17 @@
+<div class="control-group">
+	<label class="control-label" for="owner_id">{{ i18n.devices.popupSettings.assignTo }}</label>
+	<div class="controls">
+		<select name="owner_id">
+		{{#select owner_id}}
+			<option value="none">
+				{{ i18n.devices.popupSettings.noOwner }}
+			</option>
+			{{#each extra.users}}
+				<option value="{{id}}">
+					{{getUserFullName this}}
+				</option>
+			{{/each}}
+		{{/select}}
+		</select>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+<div class="table-wrapper">
+	<table id="mobile_data_table" class="monster-table footable">
+		<thead>
+			<tr>
+				<th>
+					{{i18n.balance.mobileTable.date}}
+				</th>
+				<th>
+					{{i18n.balance.mobileTable.accountName}}
+				</th>
+				<th>
+					{{i18n.balance.mobileTable.number}}
+				</th>
+				<th>
+					{{i18n.balance.mobileTable.quantity}}
+				</th>
+			{{#if @root.showCredits}}
+				<th data-breakpoints="xs">
+					{{i18n.balance.mobileTable.amount}}
+				</th>
+			{{/if}}
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+</div>

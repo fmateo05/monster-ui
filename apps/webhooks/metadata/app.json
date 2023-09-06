@@ -1,0 +1,50 @@
+{
+	"name": "webhooks",
+	"api_url": "http://10.26.0.41:8000/v2",
+	"i18n": {
+		"de-DE": {
+			"label": "Webhooks",
+			"description": "Erfahren Sie mehr über Kazoo-Webhooks, erstellen Sie neue Webhooks und verwalten und debuggen Sie vorhandene Webhooks.",
+			"extended_description": "Mithilfe von Webhooks können Entwickler konsequente Integrationen erstellen, die auf unkritischen, in Echtzeit erfolgenden Benachrichtigungen aus KAZOO basieren. Webhooks sendet beim Auftreten bestimmter Ereignisse in einem System eine HTTP-, GET- oder POST-Benachrichtigung an eine von Ihnen festgelegte URL",
+			"features": [
+				"Kanalanforderungen protokollieren",
+				"Webhooks aktivieren/deaktivieren",
+				"Benutzerdefinierte Daten hinzufügen",
+				"Live-Ereignisse",
+				"EVNs",
+				"Persönliche Konferenzräume",
+				"Entgegennehmen/Auflegen von Anrufen",
+				"Zu Benachrichtigungen, die Webhooks versenden kann, gehören eingehende/ausgehende Anrufe, Anruf entgegengenommen/beendet, Überbrückte Anrufe, Gespräch geparkt, eingehendes/ausgehendes Fax, Callflow ausgelöst, Objekt ausgelöst"
+			]
+		},
+		"en-US": {
+			"label": "Webhooks",
+			"description": "Webhooks is your portal to learn about KAZOO webhooks, create new webhooks, as well as manage and debug existing webhooks.",
+			"extended_description": "Webhooks enables developers to build rigorous integrations that rely on real-time, non-critical notifications from KAZOO. Webhooks sends a HTTP, GET, or POST notification to a URL defined by you when certain events occur on a system",
+			"features": [
+				"Log channel request",
+				"Enable/disable webhooks",
+				"Add custom data",
+				"Live events",
+				"CDRs",
+				"Personal conference rooms",
+				"Call pickups/hangups",
+				"Notifications that Webhooks can send are: Inbound/ outbound calls, Call answered/ ended, Bridged calls, Call parked, Inbound/ outbound fax, Callflow triggered, Object triggered"
+			]
+		}
+	},
+	"tags": [
+		"developer"
+	],
+	"author": "2600hz",
+	"version": "1.0",
+	"license": "-",
+	"price": 0,
+	"icon": "WebHooks_app.png",
+	"screenshots": [
+		"Webhooks1.png",
+		"Webhooks2.png"
+	],
+	"phase": "gold",
+	"pvt_type": "app"
+}

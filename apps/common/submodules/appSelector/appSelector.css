@@ -1,0 +1,197 @@
+/* _colors.scss */
+/* unique color names */
+/* semantic color names */
+.app-selector-dialog {
+  width: 1100px;
+  max-width: inherit;
+  max-height: inherit; }
+  .app-selector-dialog .popup-body {
+    max-height: inherit; }
+    .app-selector-dialog .popup-body .app-selector {
+      max-height: inherit; }
+      .app-selector-dialog .popup-body .app-selector .app-selector-body {
+        box-sizing: border-box;
+        max-height: inherit;
+        padding-bottom: 70px; }
+      .app-selector-dialog .popup-body .app-selector .app-selector-menu {
+        margin-bottom: 70px;
+        min-height: calc(100vh - 11.125rem); }
+  .app-selector-dialog .popup-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    padding: 1rem;
+    background-color: #f4f4f5;
+    border-top: 1px solid #bcbcc2; }
+    .app-selector-dialog .popup-actions .monster-button {
+      margin-left: 10px;
+      font-size: 14px;
+      transition: all 0.2s; }
+
+.app-selector {
+  display: flex; }
+  .app-selector .text-non-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .app-selector .text-container {
+    padding: 0.75rem 1.5rem; }
+  .app-selector .app-selector-menu {
+    flex: initial;
+    width: 15rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: inset -1px 0px 0px 0px #bcbcc2;
+    font-size: 0.875rem;
+    line-height: 0.875rem; }
+    .app-selector .app-selector-menu ul.nav {
+      margin-top: 1.5rem; }
+      .app-selector .app-selector-menu ul.nav > li a {
+        color: #151517; }
+        .app-selector .app-selector-menu ul.nav > li a:hover {
+          color: #151517;
+          background-color: #f4f4f5;
+          box-shadow: inset -1px 0px 0px 0px #bcbcc2; }
+        .app-selector .app-selector-menu ul.nav > li a.active {
+          background-color: #e9f5ff;
+          border-right: solid 3px #2297ff;
+          color: #2297ff;
+          font-weight: 600; }
+  .app-selector .app-selector-body {
+    flex: 1;
+    margin-left: 25px;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column; }
+    .app-selector .app-selector-body .app-selector-group {
+      flex: initial;
+      margin-top: 1.5rem; }
+    .app-selector .app-selector-body .selected-title {
+      line-height: 23px; }
+      .app-selector .app-selector-body .selected-title span {
+        vertical-align: middle;
+        font-size: 1rem; }
+      .app-selector .app-selector-body .selected-title .selected-count {
+        margin-right: 0.5rem;
+        font-size: 23px;
+        font-weight: 600; }
+    .app-selector .app-selector-body .selected-list {
+      display: flex; }
+      .app-selector .app-selector-body .selected-list .app-icon-container {
+        flex: 1 1 0;
+        box-sizing: border-box;
+        max-width: 0;
+        height: 0;
+        opacity: 0;
+        transition: all 250ms ease-in-out; }
+        .app-selector .app-selector-body .selected-list .app-icon-container.show {
+          max-width: 1.5rem;
+          height: 3rem;
+          padding-top: 1rem;
+          opacity: 1; }
+          .app-selector .app-selector-body .selected-list .app-icon-container.show:nth-last-child(8) {
+            max-width: 1rem; }
+          .app-selector .app-selector-body .selected-list .app-icon-container.show:nth-last-child(9) {
+            max-width: 0.6rem; }
+          .app-selector .app-selector-body .selected-list .app-icon-container.show:nth-last-child(10) {
+            max-width: 0.4rem; }
+          .app-selector .app-selector-body .selected-list .app-icon-container.show:nth-last-child(n+11) {
+            max-width: 0; }
+          .app-selector .app-selector-body .selected-list .app-icon-container.show .app-icon {
+            box-shadow: -4px 0px 0px 0px white; }
+        .app-selector .app-selector-body .selected-list .app-icon-container .app-icon {
+          box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+          transition: all 500ms ease; }
+    .app-selector .app-selector-body .search-box {
+      width: 100%; }
+      .app-selector .app-selector-body .search-box .search-query {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+        font-size: 0.875rem;
+        line-height: 0.875rem; }
+      .app-selector .app-selector-body .search-box .search-icon {
+        margin-left: -1.75rem;
+        color: #909099; }
+    .app-selector .app-selector-body .app-icon {
+      width: 2rem;
+      height: 2rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #606069;
+      border-radius: 0.5rem; }
+    .app-selector .app-selector-body .app-selector-list {
+      flex: 1;
+      margin-top: 1.5rem;
+      overflow-y: auto;
+      border-top: solid 1px #bcbcc2; }
+      .app-selector .app-selector-body .app-selector-list ul.app-list {
+        margin-bottom: 0;
+        margin-left: 0;
+        border-bottom: solid 1px #bcbcc2;
+        list-style-type: none; }
+        .app-selector .app-selector-body .app-selector-list ul.app-list li {
+          box-sizing: border-box;
+          width: 100%; }
+          .app-selector .app-selector-body .app-selector-list ul.app-list li.app-item {
+            background-color: #FFF;
+            cursor: pointer;
+            box-shadow: inset 0px 1px 0px 0px #FFF, inset 0px -1px 0px 0px #FFF; }
+            .app-selector .app-selector-body .app-selector-list ul.app-list li.app-item:hover {
+              background-color: #e9f5ff; }
+            .app-selector .app-selector-body .app-selector-list ul.app-list li.app-item.selected {
+              background-color: #B8DEFF; }
+            .app-selector .app-selector-body .app-selector-list ul.app-list li.app-item.even:not(.selected) .text-container {
+              background-color: #f4f4f5; }
+              .app-selector .app-selector-body .app-selector-list ul.app-list li.app-item.even:not(.selected) .text-container:hover {
+                background-color: transparent;
+                transition: none; }
+            .app-selector .app-selector-body .app-selector-list ul.app-list li.app-item .text-container {
+              box-sizing: border-box;
+              display: flex;
+              flex-wrap: wrap;
+              width: 100%;
+              transition: background-color 250ms linear; }
+              .app-selector .app-selector-body .app-selector-list ul.app-list li.app-item .text-container:hover {
+                background-color: transparent;
+                transition: none; }
+            .app-selector .app-selector-body .app-selector-list ul.app-list li.app-item .app-icon {
+              flex: initial;
+              margin-right: 0.75rem;
+              margin-bottom: 0.75rem; }
+            .app-selector .app-selector-body .app-selector-list ul.app-list li.app-item .app-title {
+              flex: 1;
+              margin-bottom: 0.75rem;
+              font-size: 0.875rem;
+              font-weight: 600;
+              align-self: center; }
+            .app-selector .app-selector-body .app-selector-list ul.app-list li.app-item .app-description {
+              width: 100%;
+              padding-right: 25%;
+              font-size: 0.75rem;
+              line-height: 1rem;
+              white-space: nowrap;
+              overflow-x: hidden;
+              text-overflow: ellipsis; }
+          .app-selector .app-selector-body .app-selector-list ul.app-list li.no-apps-item {
+            padding: 2.5rem;
+            background-color: #f4f4f5; }
+            .app-selector .app-selector-body .app-selector-list ul.app-list li.no-apps-item .no-apps-icon {
+              margin-bottom: 1rem; }
+              .app-selector .app-selector-body .app-selector-list ul.app-list li.no-apps-item .no-apps-icon .svg-icon {
+                width: 2rem;
+                height: 2rem;
+                color: #bcbcc2; }
+            .app-selector .app-selector-body .app-selector-list ul.app-list li.no-apps-item .no-apps-description {
+              color: #151517;
+              font-size: 0.875rem; }
+            .app-selector .app-selector-body .app-selector-list ul.app-list li.no-apps-item .no-apps-icon, .app-selector .app-selector-body .app-selector-list ul.app-list li.no-apps-item .no-apps-description {
+              text-align: center; }

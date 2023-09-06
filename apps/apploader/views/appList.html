@@ -1,0 +1,24 @@
+<div class="app-list-dropdown-wrapper">
+	{{#each apps}}
+		<li>
+			<a class="appSelector" data-name="{{name}}" data-id="{{id}}" data-type="{{#if name}}app{{else}}link{{/if}}">{{label}}</a>
+			<ul>
+				<li>
+					<a>
+						{{#if description}}
+							{{description}}
+						{{else}}
+							{{i18n.noDescription}}
+						{{/if}}
+					</a>
+				</li>
+			</ul>
+		</li>
+	{{/each}}
+
+	{{#if allowAppstore}}
+		<li>
+			<a href="#" class="appSelector" data-name="appstore">{{i18n.appstore.button}}</a>
+		</li>
+	{{/if}}
+</div>

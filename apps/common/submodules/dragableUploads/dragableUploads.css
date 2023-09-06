@@ -1,0 +1,98 @@
+/* _colors.scss */
+/* unique color names */
+/* semantic color names */
+.dragableUploads-wrapper .dragable-file-upload-area {
+  padding: 24px 16px; }
+  .dragableUploads-wrapper .dragable-file-upload-area form.form {
+    margin: 0; }
+    .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop {
+      text-align: center;
+      min-height: 102px;
+      background-color: #F4F4F5;
+      border: 1px solid #bcbcc2;
+      border-radius: 2px;
+      color: #64646c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop:hover {
+        background-color: #F0F0F9; }
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop .svg-icon {
+        width: 2rem;
+        height: 2rem; }
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop .upload-file {
+        display: inline-block;
+        padding: 5px; }
+        .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop .upload-file label {
+          font-weight: bold;
+          color: #64646c;
+          margin: 0; }
+        .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop .upload-file:hover {
+          cursor: pointer;
+          text-decoration: underline;
+          text-decoration-color: #151517; }
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop .file-drop-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop .file-drop-inner .inner-text {
+          display: flex;
+          align-items: center; }
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop .file-drop-error,
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop .file-drop-success {
+        display: none; }
+        .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop .file-drop-error .upload-file label,
+        .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop .file-drop-success .upload-file label {
+          font-weight: bold;
+          color: #64646c; }
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop.dragover {
+        background-color: #bfbfc8; }
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop.success .iconography,
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop.success .file-drop-inner,
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop.success .file-drop-error {
+        display: none; }
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop.success .file-drop-success {
+        display: block; }
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop.error .iconography,
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop.error .file-drop-inner,
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop.error .file-drop-success {
+        display: none; }
+      .dragableUploads-wrapper .dragable-file-upload-area form.form .file-drop.error .file-drop-error {
+        display: block; }
+    .dragableUploads-wrapper .dragable-file-upload-area form.form .allowed-files-legend {
+      font-size: 0.8rem;
+      text-align: center;
+      color: #64646c; }
+
+.dragableUploads-wrapper .dragable-file-list-area {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px; }
+  .dragableUploads-wrapper .dragable-file-list-area .file-box {
+    display: flex;
+    border-bottom: 1px solid #bcbcc2;
+    padding: .7rem 12px;
+    font-size: 0.8rem;
+    cursor: pointer; }
+    .dragableUploads-wrapper .dragable-file-list-area .file-box:first-child {
+      border-top: 1px solid #bcbcc2; }
+    .dragableUploads-wrapper .dragable-file-list-area .file-box:hover .file-item-icon .svg-icon {
+      color: #ff0000; }
+    .dragableUploads-wrapper .dragable-file-list-area .file-box .file-item-name {
+      flex: 1;
+      font-size: 12px; }
+    .dragableUploads-wrapper .dragable-file-list-area .file-box .file-item-icon .svg-icon {
+      color: #bcbcc2; }
+
+.dragableUploads-wrapper .dragable-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 16px;
+  background-color: #F4F4F5;
+  margin-top: 24px; }
+  .dragableUploads-wrapper .dragable-actions .dragable-cancel {
+    color: #64646c;
+    padding: 8px 15px;
+    cursor: pointer; }

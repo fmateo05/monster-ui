@@ -1,0 +1,823 @@
+/* _colors.scss */
+/* unique color names */
+/* semantic color names */
+@import url("../submodules/devices/devices.css");
+@import url("../submodules/groups/groups.css");
+@import url("../submodules/myOffice/myOffice.css");
+@import url("../submodules/numbers/numbers.css");
+@import url("../submodules/callLogs/callLogs.css");
+@import url("../submodules/users/users.css");
+@import url("../submodules/featureCodes/featureCodes.css");
+@import url("../submodules/vmboxes/vmboxes.css");
+#form_add_office_hours {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  max-height: inherit;
+  width: 448px; }
+  #form_add_office_hours select {
+    width: 100%;
+    height: 2rem;
+    margin: 0;
+    border-radius: 2px;
+    box-sizing: border-box; }
+  #form_add_office_hours .form-content {
+    overflow-y: auto;
+    padding: 1.5rem 1rem; }
+    #form_add_office_hours .form-content .no-days-error,
+    #form_add_office_hours .form-content .overlapping-hours-error {
+      display: none; }
+    #form_add_office_hours .form-content > * {
+      margin: 0; }
+      #form_add_office_hours .form-content > *:not(:first-child) {
+        margin-top: 1rem; }
+      #form_add_office_hours .form-content > *:first-child > label {
+        margin-bottom: 1rem; }
+    #form_add_office_hours .form-content ul.controls {
+      margin: 0;
+      list-style: none; }
+      #form_add_office_hours .form-content ul.controls li {
+        margin: 5px 0; }
+        #form_add_office_hours .form-content ul.controls li:first-child {
+          margin-top: 0; }
+        #form_add_office_hours .form-content ul.controls li:last-child {
+          margin-bottom: 0; }
+      #form_add_office_hours .form-content ul.controls .monster-checkbox input[type="checkbox"]:checked ~ span {
+        font-weight: bold; }
+    #form_add_office_hours .form-content .ui-timepicker-input {
+      height: 2rem;
+      border-radius: 2px;
+      border: 1px solid #c0c0ca;
+      width: auto;
+      padding: 0 6px; }
+  #form_add_office_hours .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 1rem;
+    background-color: #f4f4f5;
+    border-top-color: #dbdbde; }
+    #form_add_office_hours .form-actions > *:not(:last-child) {
+      margin-right: .75rem; }
+
+.monster-alert.holiday-delete-dialog {
+  font-size: 14px; }
+  .monster-alert.holiday-delete-dialog .ui-dialog-titlebar {
+    padding: 24px; }
+    .monster-alert.holiday-delete-dialog .ui-dialog-titlebar .ui-dialog-title {
+      font-size: 18px;
+      line-height: 18px;
+      text-align: left;
+      color: #151517; }
+      .monster-alert.holiday-delete-dialog .ui-dialog-titlebar .ui-dialog-title .fa {
+        font-size: 2rem;
+        margin-right: 16px; }
+      .monster-alert.holiday-delete-dialog .ui-dialog-titlebar .ui-dialog-title .fa, .monster-alert.holiday-delete-dialog .ui-dialog-titlebar .ui-dialog-title .title {
+        display: inline-block;
+        vertical-align: middle; }
+  .monster-alert.holiday-delete-dialog .dialog-content-wrapper {
+    padding: 0 24px 32px;
+    width: 400px;
+    color: #151517; }
+  .monster-alert.holiday-delete-dialog .action-buttons {
+    padding: 0 24px 24px;
+    text-align: right; }
+    .monster-alert.holiday-delete-dialog .action-buttons .cancel {
+      margin-right: 12px; }
+    .monster-alert.holiday-delete-dialog .action-buttons .delete {
+      color: #151517;
+      background: #2ed022;
+      border: 1px solid #209218; }
+
+#form_add_edit_office_holidays, #form_national_holidays {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  max-height: inherit;
+  width: 398px; }
+  #form_add_edit_office_holidays select, #form_add_edit_office_holidays .form-control, #form_national_holidays select, #form_national_holidays .form-control {
+    width: 100%;
+    height: 36px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin: 0; }
+  #form_add_edit_office_holidays .form-content, #form_national_holidays .form-content {
+    overflow-y: auto;
+    padding: 1.5rem 1rem;
+    color: #151517; }
+    #form_add_edit_office_holidays .form-content .control-label, #form_national_holidays .form-content .control-label {
+      margin-bottom: 4px; }
+    #form_add_edit_office_holidays .form-content .control-group, #form_national_holidays .form-content .control-group {
+      margin-bottom: 1.5rem; }
+      #form_add_edit_office_holidays .form-content .control-group:last-child, #form_national_holidays .form-content .control-group:last-child {
+        margin-bottom: 0; }
+      #form_add_edit_office_holidays .form-content .control-group #recurring:disabled + i, #form_national_holidays .form-content .control-group #recurring:disabled + i {
+        cursor: not-allowed; }
+      #form_add_edit_office_holidays .form-content .control-group .row-fluid, #form_national_holidays .form-content .control-group .row-fluid {
+        align-items: center;
+        display: none; }
+        #form_add_edit_office_holidays .form-content .control-group .row-fluid select:not(:last-child), #form_national_holidays .form-content .control-group .row-fluid select:not(:last-child) {
+          margin-right: 12px; }
+        #form_add_edit_office_holidays .form-content .control-group .row-fluid .separator, #form_national_holidays .form-content .control-group .row-fluid .separator {
+          margin-right: 1rem;
+          flex-shrink: 0; }
+        #form_add_edit_office_holidays .form-content .control-group .row-fluid.date-range .date, #form_national_holidays .form-content .control-group .row-fluid.date-range .date {
+          width: 60px; }
+        #form_add_edit_office_holidays .form-content .control-group .row-fluid.selected, #form_national_holidays .form-content .control-group .row-fluid.selected {
+          display: flex; }
+        #form_add_edit_office_holidays .form-content .control-group .row-fluid .select-year, #form_national_holidays .form-content .control-group .row-fluid .select-year {
+          width: 50%; }
+        #form_add_edit_office_holidays .form-content .control-group .row-fluid .day.from, #form_national_holidays .form-content .control-group .row-fluid .day.from {
+          margin-right: 2rem; }
+        #form_add_edit_office_holidays .form-content .control-group .row-fluid .controls, #form_national_holidays .form-content .control-group .row-fluid .controls {
+          width: 30%;
+          margin: 0 12px 0 0;
+          height: 36px; }
+          #form_add_edit_office_holidays .form-content .control-group .row-fluid .controls input, #form_national_holidays .form-content .control-group .row-fluid .controls input {
+            width: 90%;
+            margin: unset;
+            height: 25px; }
+    #form_add_edit_office_holidays .form-content .optional-time, #form_add_edit_office_holidays .form-content .optional-year, #form_national_holidays .form-content .optional-time, #form_national_holidays .form-content .optional-year {
+      display: none; }
+      #form_add_edit_office_holidays .form-content .optional-time.show, #form_add_edit_office_holidays .form-content .optional-year.show, #form_national_holidays .form-content .optional-time.show, #form_national_holidays .form-content .optional-year.show {
+        display: block; }
+      #form_add_edit_office_holidays .form-content .optional-time .row-fluid, #form_add_edit_office_holidays .form-content .optional-year .row-fluid, #form_national_holidays .form-content .optional-time .row-fluid, #form_national_holidays .form-content .optional-year .row-fluid {
+        display: flex; }
+    #form_add_edit_office_holidays .form-content .monster-checkbox span, #form_national_holidays .form-content .monster-checkbox span {
+      font-weight: 600; }
+    #form_add_edit_office_holidays .form-content .no-name-error, #form_add_edit_office_holidays .form-content .minimum-name-error, #form_add_edit_office_holidays .form-content .maximum-name-error, #form_add_edit_office_holidays .form-content .duplicate-name-error, #form_national_holidays .form-content .no-name-error, #form_national_holidays .form-content .minimum-name-error, #form_national_holidays .form-content .maximum-name-error, #form_national_holidays .form-content .duplicate-name-error {
+      display: none; }
+  #form_add_edit_office_holidays .form-actions, #form_national_holidays .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 1rem;
+    background-color: #f4f4f5;
+    border-top-color: #dbdbde; }
+    #form_add_edit_office_holidays .form-actions button, #form_national_holidays .form-actions button {
+      color: #151517; }
+    #form_add_edit_office_holidays .form-actions > *:not(:last-child), #form_national_holidays .form-actions > *:not(:last-child) {
+      margin-right: .75rem; }
+  #form_add_edit_office_holidays .include-holidays-list, #form_national_holidays .include-holidays-list {
+    max-height: 350px;
+    overflow-y: scroll; }
+  #form_add_edit_office_holidays #include_holidays_table, #form_national_holidays #include_holidays_table {
+    display: block; }
+    #form_add_edit_office_holidays #include_holidays_table thead, #form_national_holidays #include_holidays_table thead {
+      display: block; }
+      #form_add_edit_office_holidays #include_holidays_table thead tr, #form_national_holidays #include_holidays_table thead tr {
+        background-color: #dbdbde; }
+        #form_add_edit_office_holidays #include_holidays_table thead tr th, #form_national_holidays #include_holidays_table thead tr th {
+          height: 40px;
+          font-size: 12px;
+          color: #2e2e32;
+          font-weight: 600;
+          border-color: #bcbcc2; }
+    #form_add_edit_office_holidays #include_holidays_table tbody tr, #form_national_holidays #include_holidays_table tbody tr {
+      height: 44px;
+      border: 1px #bcbcc2; }
+      #form_add_edit_office_holidays #include_holidays_table tbody tr td span, #form_national_holidays #include_holidays_table tbody tr td span {
+        margin-left: 1rem; }
+    #form_add_edit_office_holidays #include_holidays_table tbody tr:nth-child(even), #form_national_holidays #include_holidays_table tbody tr:nth-child(even) {
+      background: rgba(244, 244, 245, 0.48); }
+    #form_add_edit_office_holidays #include_holidays_table td, #form_add_edit_office_holidays #include_holidays_table th, #form_national_holidays #include_holidays_table td, #form_national_holidays #include_holidays_table th {
+      border-left: 1px solid #bcbcc2;
+      border-right: 1px solid #bcbcc2;
+      padding-left: 16px;
+      text-align: left;
+      width: 300px;
+      max-width: 300px; }
+
+#strategy_menu_popup {
+  width: 760px;
+  padding: 20px; }
+  #strategy_menu_popup > div:not(:last-of-type) {
+    margin-bottom: 25px; }
+  #strategy_menu_popup .menu-block > div {
+    float: left; }
+  #strategy_menu_popup .menu-block .left {
+    width: 400px; }
+  #strategy_menu_popup .menu-block .right {
+    margin-left: 20px;
+    width: 340px; }
+  #strategy_menu_popup .menu-block .title {
+    color: #2297FF;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px 0; }
+  #strategy_menu_popup .menu-block .menu-line {
+    padding: 5px 0px; }
+    #strategy_menu_popup .menu-block .menu-line > div,
+    #strategy_menu_popup .menu-block .menu-line > input,
+    #strategy_menu_popup .menu-block .menu-line > select {
+      margin: 0 12px 0 0;
+      display: inline-block;
+      vertical-align: middle; }
+    #strategy_menu_popup .menu-block .menu-line .target-input .add-on {
+      width: 20px; }
+    #strategy_menu_popup .menu-block .menu-line .target-select {
+      width: 150px; }
+    #strategy_menu_popup .menu-block .menu-line i.remove-btn {
+      cursor: pointer;
+      opacity: 0.8;
+      vertical-align: middle; }
+    #strategy_menu_popup .menu-block .menu-line i.remove-btn:hover {
+      color: #ff1212 !important; }
+    #strategy_menu_popup .menu-block .menu-line i.remove-btn:active {
+      color: #ff1212 !important;
+      text-shadow: 1px 1px 1px #999; }
+  #strategy_menu_popup .menu-block .add-menu-line {
+    margin-top: 10px; }
+  #strategy_menu_popup .action-block .cancel-link {
+    line-height: 30px;
+    margin-right: 10px;
+    color: #2297FF; }
+  #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option {
+    border-color: #c0c0c9; }
+    #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option.active {
+      border-color: #2297FF; }
+    #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option:not(:last-of-type) {
+      margin-bottom: 15px; }
+    #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option.active .greeting-option-header i {
+      color: #2297FF !important; }
+    #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option .greeting-option-header {
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 2px;
+      cursor: pointer;
+      background-color: #e0e0e9; }
+      #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option .greeting-option-header:not(.collapsed) {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px; }
+      #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option .greeting-option-header i {
+        vertical-align: middle; }
+    #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option .greeting-option-content {
+      padding: 10px;
+      font-size: 14px; }
+      #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option .greeting-option-content textarea {
+        width: 100%;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        margin: 0px;
+        min-height: 90px; }
+    #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option .greeting-option-actions {
+      margin-top: 10px; }
+      #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option .greeting-option-actions button:not(:first-of-type) {
+        margin-right: 10px; }
+    #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option .upload-container {
+      display: flex; }
+      #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option .upload-container input[type="text"] {
+        margin: 0;
+        width: auto;
+        box-shadow: none;
+        border-radius: 2px 0px 0px 2px;
+        margin-right: -1px;
+        flex-grow: 1; }
+      #strategy_menu_popup #strategy_menu_popup_accordion .greeting-option .upload-container button {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        width: 170px;
+        padding-top: 4px;
+        padding-bottom: 4px; }
+
+.e911-change-wrapper {
+  padding: 15px;
+  width: 400px; }
+  .e911-change-wrapper .cancel-link {
+    margin-right: 5px; }
+  .e911-change-wrapper .list-choices {
+    margin-bottom: 20px;
+    margin-top: 20px; }
+    .e911-change-wrapper .list-choices .choice {
+      background: #EEE;
+      padding: 20px;
+      border: 1px solid #CCC;
+      margin-bottom: 5px; }
+      .e911-change-wrapper .list-choices .choice:hover {
+        background: #FFF;
+        cursor: pointer; }
+      .e911-change-wrapper .list-choices .choice.active {
+        background: #FFF;
+        border: 1px solid #22a5ff; }
+  .e911-change-wrapper .actions {
+    margin-top: 10px; }
+
+#strategy_custom_conference_greeting .actions button:not(:first-child) {
+  margin-left: 10px; }
+
+#voip_container .left-menu #myOffice {
+  margin-bottom: 20px; }
+
+#voip_container .left-menu > div {
+  margin-top: 10px; }
+
+#voip_container .right-content #strategy_container .clearfix:after {
+  clear: right; }
+
+#voip_container .right-content #strategy_container .element-container .element-header-outer {
+  background: #dedede;
+  border-radius: 2px; }
+  #voip_container .right-content #strategy_container .element-container .element-header-outer .element-header-inner {
+    display: flex;
+    height: 60px;
+    background: #f3f3f3;
+    margin: 5px;
+    cursor: pointer; }
+    #voip_container .right-content #strategy_container .element-container .element-header-outer .element-header-inner > div {
+      width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      box-sizing: border-box; }
+    #voip_container .right-content #strategy_container .element-container .element-header-outer .element-header-inner .title {
+      display: flex;
+      align-items: center; }
+      #voip_container .right-content #strategy_container .element-container .element-header-outer .element-header-inner .title > .svg-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0 20px;
+        color: #22a5ff; }
+      #voip_container .right-content #strategy_container .element-container .element-header-outer .element-header-inner .title .text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 18px; }
+    #voip_container .right-content #strategy_container .element-container .element-header-outer .element-header-inner .summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 20px; }
+      #voip_container .right-content #strategy_container .element-container .element-header-outer .element-header-inner .summary .content {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: flex;
+        align-items: center; }
+        #voip_container .right-content #strategy_container .element-container .element-header-outer .element-header-inner .summary .content i {
+          margin-left: 15px; }
+      #voip_container .right-content #strategy_container .element-container .element-header-outer .element-header-inner .summary .icons > * {
+        margin-right: 20px; }
+        #voip_container .right-content #strategy_container .element-container .element-header-outer .element-header-inner .summary .icons > *:first-child {
+          margin-left: 20px; }
+
+#voip_container .right-content #strategy_container .element-container .element-content {
+  display: none;
+  border: solid 1px #dedede; }
+  #voip_container .right-content #strategy_container .element-container .element-content .basic-actions {
+    padding: 20px;
+    border-top: solid 1px #ccc;
+    background-color: #f3f3f3;
+    text-align: right; }
+    #voip_container .right-content #strategy_container .element-container .element-content .basic-actions .cancel-link {
+      margin-right: 10px;
+      vertical-align: middle; }
+
+#voip_container .right-content #strategy_container .element-container:not(:first-of-type) {
+  margin-bottom: 5px;
+  margin-top: 5px; }
+
+#voip_container .right-content #strategy_container .element-container.main-number .number-element, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-element, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-element {
+  position: relative;
+  border-bottom: solid 1px #dedede;
+  height: 70px; }
+  #voip_container .right-content #strategy_container .element-container.main-number .number-element > div, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-element > div, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-element > div {
+    display: inline-block;
+    padding: 10px;
+    line-height: 50px;
+    height: 50px; }
+  #voip_container .right-content #strategy_container .element-container.main-number .number-element .features-block .dropdown-toggle, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-element .features-block .dropdown-toggle, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-element .features-block .dropdown-toggle {
+    background-color: #ffffff;
+    margin-top: 5px; }
+  #voip_container .right-content #strategy_container .element-container.main-number .number-element .features-block .edit-features, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-element .features-block .edit-features, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-element .features-block .edit-features {
+    position: absolute;
+    right: 10px; }
+  #voip_container .right-content #strategy_container .element-container.main-number .number-element .features-block .features, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-element .features-block .features, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-element .features-block .features {
+    margin-right: 45px; }
+    #voip_container .right-content #strategy_container .element-container.main-number .number-element .features-block .features > i.active, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-element .features-block .features > i.active, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-element .features-block .features > i.active {
+      display: inline-block; }
+  #voip_container .right-content #strategy_container .element-container.main-number .number-element .number > button, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-element .number > button, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-element .number > button {
+    margin: 0px 15px; }
+  #voip_container .right-content #strategy_container .element-container.main-number .number-element .no-number-error, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-element .no-number-error, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-element .no-number-error {
+    font-style: italic;
+    color: #ee1212;
+    font-weight: 600; }
+
+#voip_container .right-content #strategy_container .element-container.main-number .number-actions, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-actions, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-actions {
+  padding: 25px 20px;
+  background-color: #f3f3f3; }
+  #voip_container .right-content #strategy_container .element-container.main-number .number-actions .action-links a, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-actions .action-links a, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-actions .action-links a {
+    margin-right: 10px; }
+    #voip_container .right-content #strategy_container .element-container.main-number .number-actions .action-links a i, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-actions .action-links a i, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-actions .action-links a i {
+      margin-right: 5px; }
+  #voip_container .right-content #strategy_container .element-container.main-number .number-actions .action-links ul.dropdown-menu, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-actions .action-links ul.dropdown-menu, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-actions .action-links ul.dropdown-menu {
+    min-width: 0; }
+  #voip_container .right-content #strategy_container .element-container.main-number .number-actions .action-links .buy-dropdown:hover, #voip_container .right-content #strategy_container .element-container.strategy-confnum .number-actions .action-links .buy-dropdown:hover, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .number-actions .action-links .buy-dropdown:hover {
+    background-color: transparent;
+    text-decoration: underline; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-confnum .element-header-outer .element-header-inner .title > .svg-icon, #voip_container .right-content #strategy_container .element-container.strategy-faxingnum .element-header-outer .element-header-inner .title > .svg-icon {
+  color: #33DB24; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-hours .element-content form {
+  margin: 0px; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-toggler {
+  padding: 20px; }
+  #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-toggler .title {
+    line-height: 30px; }
+    #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-toggler .title span {
+      font-size: 14px; }
+    #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-toggler .title input:checked ~ span {
+      font-weight: 600; }
+    #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-toggler .title > input {
+      margin: 0 16px 4px 0; }
+  #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-toggler > label:first-of-type {
+    margin-bottom: 20px; }
+  #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-toggler .description {
+    margin: 5px 0 0 20px; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-div {
+  padding: 20px;
+  display: none; }
+  #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-div .custom-hours-header {
+    font-size: 18px;
+    padding: 0 0 15px; }
+    #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-div .custom-hours-header .timezone {
+      margin-left: 5px; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper {
+  margin-top: 1.5rem; }
+  #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .actions-wrapper {
+    display: flex;
+    justify-content: space-between; }
+    #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .actions-wrapper button:not(:first-child) {
+      margin-left: 1rem; }
+  #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .monster-button-svg {
+    display: flex;
+    align-items: center; }
+    #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .monster-button-svg span {
+      margin-left: .5rem; }
+  #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper {
+    margin-top: 1rem; }
+    #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-nav {
+      list-style: none;
+      margin: 0;
+      display: flex;
+      border: 1px solid #bcbcc2;
+      border-bottom: 0;
+      border-radius: 2px 2px 0 0;
+      background-color: #f4f4f5; }
+      #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-nav .nav-item {
+        padding: 1rem;
+        border-right: 1px solid #bcbcc2;
+        border-bottom: 1px solid #bcbcc2;
+        position: relative; }
+        #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-nav .nav-item.active {
+          background-color: #FFF;
+          color: #2297FF;
+          border-bottom: 0; }
+          #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-nav .nav-item.active::before {
+            content: '';
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: #2297FF; }
+        #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-nav .nav-item.disabled {
+          background-color: #bcbcc2; }
+        #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-nav .nav-item:hover:not(.active):not(.disabled) {
+          cursor: pointer;
+          background-color: #e0e0e9; }
+      #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-nav .nav-item-filler {
+        max-width: 100%;
+        height: 52px;
+        flex: 1 1 auto;
+        border-bottom: 1px solid #bcbcc2; }
+    #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content {
+      border: 1px solid #bcbcc2;
+      border-top: 0;
+      border-bottom: 0;
+      border-radius: 0 0 2px 2px; }
+      #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .empty-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.5rem 0;
+        border-bottom: 1px solid #bcbcc2; }
+        #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .empty-state .title {
+          display: flex;
+          align-items: center; }
+          #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .empty-state .title .svg-icon {
+            color: #909099;
+            margin-right: 12px;
+            width: 1.5rem;
+            height: 1.5rem; }
+          #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .empty-state .title .text {
+            font-size: 1rem;
+            font-weight: 600; }
+        #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .empty-state .content {
+          display: flex;
+          flex-direction: column; }
+          #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .empty-state .content .info-text {
+            padding: 2.5rem 0 1rem; }
+          #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .empty-state .content select {
+            width: 100%;
+            margin: 0;
+            height: 2rem;
+            border-radius: 2px; }
+      #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .office-hours {
+        display: flex;
+        padding: 1.5rem 1rem;
+        border-bottom: 1px solid #bcbcc2; }
+        #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .office-hours select {
+          margin: 0; }
+        #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .office-hours .day {
+          font-size: 12px;
+          font-weight: 600;
+          width: 100px;
+          line-height: 38px; }
+        #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .office-hours .intervals {
+          list-style: none;
+          margin: 0;
+          flex-grow: 1; }
+          #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .office-hours .intervals .interval {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; }
+            #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .office-hours .intervals .interval:not(:first-child) {
+              margin-top: 1rem; }
+            #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .office-hours .intervals .interval select {
+              height: 2rem;
+              border-radius: 2px; }
+            #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .office-hours .intervals .interval .hours {
+              display: flex;
+              align-items: center; }
+              #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .office-hours .intervals .interval .hours input {
+                height: 2rem;
+                border-radius: 2px;
+                border: 1px solid #c0c0ca;
+                max-width: 88px;
+                padding-left: 6px;
+                padding-right: 6px; }
+              #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .office-hours .intervals .interval .hours .separator {
+                margin: 0 1rem; }
+            #voip_container .right-content #strategy_container .element-container.strategy-hours .element-content .custom-hours-wrapper .office-hours-wrapper .office-hours-content .office-hours .intervals .interval .ui-timepicker-select {
+              max-width: 88px; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-toggler {
+  padding: 32px 0 20px 20px; }
+  #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-toggler span {
+    color: #151517;
+    font-weight: 600; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .monster-button {
+  color: #151517;
+  border-radius: 2px; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .save-button {
+  background: #2ed022;
+  border-color: #209218;
+  margin-left: 3px; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div {
+  color: #151517;
+  padding: 20px;
+  display: none; }
+  #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .title {
+    font-size: 18px;
+    margin-bottom: 1rem; }
+  #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .help-div {
+    background-color: #B8DEFF;
+    display: flex;
+    padding: 16px; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .help-div .help-icon {
+      margin-right: 12px;
+      position: relative;
+      bottom: 2px; }
+  #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .year-config {
+    margin: 16px 0; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .year-config select {
+      height: 36px;
+      width: 140px; }
+  #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .actions-wrapper {
+    position: absolute;
+    z-index: 1; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .actions-wrapper button {
+      font-size: 14px;
+      padding: 8px 7px;
+      border: 1px solid #bcbcc2;
+      background: linear-gradient(-180deg, #FFF 0%, #f4f4f5 100%);
+      margin-right: 8px;
+      min-width: 96px; }
+      #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .actions-wrapper button span {
+        margin-left: .5rem; }
+      #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .actions-wrapper button .svg-icon {
+        color: #64646c; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .actions-wrapper .add-holiday {
+      background: #2297FF;
+      border: 1px solid #006bca; }
+      #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .actions-wrapper .add-holiday .svg-icon {
+        color: #151517; }
+  #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table {
+    color: #2e2e32; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table .footable-filtering .input-group {
+      width: 256px; }
+      #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table .footable-filtering .input-group .form-control {
+        width: 192px; }
+      #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table .footable-filtering .input-group input[type="text"] {
+        height: 22px; }
+      #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table .footable-filtering .input-group .input-group-btn .btn-primary {
+        background-color: #FFF !important;
+        color: #909099;
+        border-left: unset;
+        height: 36px; }
+        #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table .footable-filtering .input-group .input-group-btn .btn-primary .fooicon {
+          font-size: 16px; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table .footable-header {
+      background-color: #dbdbde; }
+      #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table .footable-header th {
+        font-size: 12px;
+        font-weight: 600;
+        color: #2e2e32;
+        border-color: #bcbcc2; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table tbody tr {
+      height: 44px;
+      border: 1px #bcbcc2; }
+      #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table tbody tr svg {
+        color: #64646c;
+        padding: 0 10px;
+        cursor: pointer; }
+      #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table tbody tr.footable-empty {
+        display: none; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table tbody tr:nth-child(even) {
+      background: rgba(244, 244, 245, 0.48); }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table td:first-child, #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table .footable-header th:first-child {
+      border-left: 1px solid #bcbcc2; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table td:last-child, #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div #holidays_list_table .footable-header th:last-child {
+      border-right: 1px solid #bcbcc2; }
+  #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .custom-footable-empty {
+    color: #151517;
+    display: none;
+    border-radius: 2px;
+    border: 1px solid #e0e0e9;
+    border-top: none;
+    text-align: center; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .custom-footable-empty.show {
+      display: block; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .custom-footable-empty svg {
+      color: #909099;
+      height: 1.5rem;
+      width: 1.5rem;
+      cursor: default;
+      margin-right: 12px; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .custom-footable-empty .title-row {
+      padding: 44px 0;
+      display: inline-flex;
+      align-items: center; }
+      #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .custom-footable-empty .title-row span {
+        font-size: 16px;
+        font-weight: 600; }
+    #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .custom-footable-empty .description-row {
+      margin-bottom: 40px; }
+      #voip_container .right-content #strategy_container .element-container.strategy-holidays .element-content .holidays-div .custom-footable-empty .description-row .description {
+        font-size: 14px; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs {
+  height: 34px;
+  margin: 0;
+  padding: 20px; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .open-hours-tab:hover a, #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .open-hours-tab:hover i {
+    color: #74b814; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .open-hours-tab.active a {
+    background-color: #74b814; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .lunch-hours-tab:hover a, #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .lunch-hours-tab:hover i {
+    color: #f89406; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .lunch-hours-tab.active a {
+    background-color: #f89406; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .after-hours-tab:hover a, #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .after-hours-tab:hover i {
+    color: #363636; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .after-hours-tab.active a {
+    background-color: #363636; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .holidays-tab:hover a, #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .holidays-tab:hover i {
+    color: #49afcd; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .holidays-tab.active a {
+    background-color: #49afcd; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .open-hours-tab.active a:hover,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .open-hours-tab.active a:focus,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .open-hours-tab.active a:hover i,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .open-hours-tab.active a:focus i,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .lunch-hours-tab.active a:hover,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .lunch-hours-tab.active a:focus,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .lunch-hours-tab.active a:hover i,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .lunch-hours-tab.active a:focus i,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .after-hours-tab.active a:hover,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .after-hours-tab.active a:focus,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .after-hours-tab.active a:hover i,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .after-hours-tab.active a:focus i,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .holidays-tab.active a:hover,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .holidays-tab.active a:focus,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .holidays-tab.active a:hover i,
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .calls-tabs .holidays-tab.active a:focus i {
+    color: #fff; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs {
+  overflow: visible;
+  padding: 20px;
+  border: none;
+  background: transparent; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs .call-option {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    border: solid 2px #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f9f9f9; }
+    #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs .call-option i {
+      color: #aaa; }
+    #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs .call-option .radio-div .iradio_flat {
+      margin: 0; }
+    #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs .call-option select {
+      width: 160px; }
+    #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs .call-option.active .menu-div .menu-icon i {
+      color: rgba(238, 18, 18, 0.8); }
+    #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs .call-option.active .menu-div.has-menu .menu-icon i {
+      color: #22a5ff; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs #strategy_calls_open_hours_tab .call-option.active {
+    border-color: #74B814; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs #strategy_calls_lunch_hours_tab .call-option.active {
+    border-color: #f89406; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs #strategy_calls_after_hours_tab .call-option.active {
+    border-color: #363636; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs #strategy_calls_holidays_tab .call-option.active {
+    border-color: #49afcd; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .call-options-container .call-option {
+  margin: 14px 14px 0 0; }
+  #voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .call-options-container .call-option:last-child {
+    margin-right: 0; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs .call-option > div:not(:first-of-type) {
+  margin-top: 10px; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs .call-option .chosen-container {
+  text-align: left; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs .call-option .menu-div .link-icon i {
+  margin-right: 5px; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs .call-option .menu-div .link a {
+  color: #333;
+  text-decoration: underline; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-calls .element-content .callflow-tabs .call-option.active {
+  background-color: #f0f0f0; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-confnum .element-content .greeting-link {
+  margin-right: 30px !important;
+  position: relative; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-confnum .element-content .greeting-link:after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 50px;
+  border-right: solid 1px #c0c0c9;
+  top: -15px;
+  right: -15px; }
+
+#voip_container .right-content #strategy_container .element-container.strategy-confnum .element-content .custom-greeting-icon {
+  position: absolute;
+  right: 45px;
+  top: 23px; }
+
+#voip_container .right-content #strategy_container .element-container.helper .fa-info-circle {
+  float: left;
+  margin-right: 10px; }
+
+#voip_container .right-content #strategy_container .element-container.helper p {
+  text-align: justify; }
+
+#voip_container .right-content #strategy_container .element-container.open .element-header-outer {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px; }
+  #voip_container .right-content #strategy_container .element-container.open .element-header-outer .element-header-inner {
+    margin-bottom: 0px; }
+    #voip_container .right-content #strategy_container .element-container.open .element-header-outer .element-header-inner .summary .icons > *:last-child {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      color: #22a5ff; }
+
+#voip_container_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .3; }
